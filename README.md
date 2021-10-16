@@ -1,6 +1,6 @@
 
 # 1. M146 - Portfolio
-<img src="internetanbindung.png" alt="Alt-Text" title="" />
+<img src="Bilder/internetanbindung.png" alt="Alt-Text" title="" />
  
 ## Internetanbindung für ein Unternehmen realisieren.
 ## 17.09.2021 - 28.09.2021
@@ -182,7 +182,7 @@ Die Glasfaser Technologie hat noch den Vorteil, dass anstelle von elektrischen S
 ## Welche Verbindung eignet sich auch für Backup-Leitungen?
 Die höchste Ausfallsicherheit haben DSL, Kabel und Satellitenfunk. Wenn bei zwei Technologien kombiniert hat man natürlich nochmals eine weitere Sicherheit. Trotzdem wird es nicht möglich sein eine Verfügbarkeit von 100% zu gewährleisten. Bei der Verfügbarkeit muss man immer bedenken, je höher die Verfügbarkeit, umso Teurer der Preis. 
 Viele Unternehmen nutzen heutzutage noch eine Backup-Leitung über ein 4G Netz, welches bei einem Ausfall des Kabels automatisch auf das 4G Netzwerk wechselt. 
-<img src="\Bilder\Bild1.png" alt="Alt-Text" title="" />
+<img src="Bilder/Bild1.png" alt="Alt-Text" title="" />
   
 ## Internet Services
 ### Eigener Server (Inhouse):
@@ -234,7 +234,7 @@ Wenn die Daten aus rechtlichen Gründen nicht unter der Kontrolle des Providers 
 
 ### Vergleich
 
-<img src="\Bilder\Bild2.png" alt="Alt-Text" title="" />
+<img src="Bilder\Bild2.png" alt="Alt-Text" title="" />
  
  
 ## Sicherheit
@@ -243,7 +243,7 @@ Die ISO Reihe 27000 gibt einen allgemeinen Überblick über die informations-Sic
 
 Bei der Sicherheit wird die Frage nach der Verfügbarkeit gestellt. Systeme und Rechenzentren können mit verschiedenste attacken angegriffen werden wie durch einen Denial of Service (DDOS) Attack. Die ISO 27000 beschäftigt sich genau in diesem Fachbereich. Jedoch sollte man vor Beginn des Aufbaus eines Hoch Redundantes System eine Checkliste durchführen. Anhand dieser Checkliste kann genau ermitteln, wo und welches System mit welcher Priorität eingestuft werden muss.
 
-<img src="\Bilder\Bild3.png" alt="Alt-Text" title="" /> <br>
+<img src="Bilder\Bild3.png" alt="Alt-Text" title="" /> <br>
 Anhand dieser Grafik kann man seine Systeme einstufen. Hier werden zum Beispiel Finanzdienstleister ganz oben links bei der Kurve eingestuft und kleine Coiffeur Betriebe ganz unten Recht in der Kurve. 
 
 ### Vertraulichkeit
@@ -326,7 +326,7 @@ Das PRTG überwacht ihr Netzwerk rund um die Uhr und, wenn das Netzwerk ein Fehl
 ### LAN Guard
 Ohne Patch-Management ist Ihr Unternehmen zahlreichen Risiken ausgesetzt. Denn fehlende Updates sind die häufigste Ursache für Sicherheitslücken im Netzwerk. Mit GFI LanGuard lassen sich offene Schwachstellen schnell erkennen und rechtzeitig beheben, um Angreifern keine Chance zu geben. 
 
-<img src="\Bilder\Bild9.jpg" alt="Alt-Text" title="" /> <br>
+<img src="Bilder\Bild9.jpg" alt="Alt-Text" title="" /> <br>
 
 ### Solar Winds Netowrk Performance
 Netzwerksicherheitsprobleme treten meist dann auf, wenn man die Konfiguration ändert. Mit der Software SolarWinds NPM können diese Fehler und Netzwerk kritischen Konfiguration Änderung rückgängig gemacht und behoben werden. Neben soliden Schwachstellen-Scans und erweiterten Optionen zur Erstellung und Überwachung von Richtlinien ist dies bei weitem die erste Wahl für Netzwerküberwachungssysteme.
@@ -350,7 +350,7 @@ Beim Produkt Katalog wird beschrieben, welche Applikationen oder Dienste davon b
 
 ### Vergleich
  
-<img src="\Bilder\Bild4.png" alt="Alt-Text" title="" /> <br>
+<img src="Bilder\Bild4.png" alt="Alt-Text" title="" /> <br>
 
 ## Firewall 
 Eine Firewall ist essenziell und es ist nur eine Frage der Zeit bis ein ungebetener Gast sich im eigenen Netzwerk umschaut, es führt also kein Weg an einer Firewall vorbei. Es gibt drei Arten von Firewall Lösungen: Hardware-Firewalls, PC Lösungen und Firewall Services vom eigenen Provider z.B. Diese werden hier anschliessend verglichen.
@@ -381,7 +381,7 @@ Jeder Internet Provider hat bereits seine eigene Firewall. Damit kann man einen 
 
 ### Vergleich
  
-<img src="\Bilder\Bild5.png" alt="Alt-Text" title="" /> <br>
+<img src="Bilder\Bild5.png" alt="Alt-Text" title="" /> <br>
 
 ## VPN 
 Ein VPN ist ein Virtuellen privates Netzwerk welches auf einer öffentlich zugänglichen Infrastruktur basiert. Ausschliesslich wer zu diesem Netzwerk gehört und autorisiert ist kann mit andern Leuten in diesem Netzwerk kommunizieren. So können zum Beispiel Mitarbeiter einer Firma von zu Hause aus in das Firmennetzwerk zugreifen und die infrastruktur der Firma nutzen ohne direkt im Netzwerk sein zu müssen.
@@ -394,7 +394,7 @@ Der entscheidende Vorteil dieser Lösung liegt in der Tatsache, dass keine der l
 ###  End-to-End VPN
 Die End-to-End Architektur stellt eine direkte Verbindung zwischen zwei Hosts dar. Die End-to-End Architektur ist die sicherste Lösung für eine VPN-Verbindung, da der Tunnel mit den verschlüsselten Daten die gesamte Verbindung bis zu den Hosts abdeckt (siehe Abb. 2). Damit wäre ein Angriff auf den Verbindungsweg nur schwer durchzuführen und damit fast ausgeschlossen. Der Nachteil dieser Lösung ergibt sich aus der Tatsache, dass jeder der beteiligten Hosts eine spezielle VPN-Software benötigt und weiterhin leistungsstark genug sein sollte, damit Verzögerungen der Verbindung minimiert werden können.
  
-<img src="\Bilder\Bild6.jpg" alt="Alt-Text" title="" /> <br>
+<img src="Bilder\Bild6.jpg" alt="Alt-Text" title="" /> <br>
 
 ###  Site-to-End VPN (Remote Access)
 Diese Möglichkeit ist eine Kombination aus den beiden vorangegangen VPN-Lösungen. Remote-Access VPNs ermöglichen einen Remotezugriff auf die Ressourcen eines Unternehmens unter Wahrung der Datensicherheit, d.h. es wird eine verschlüsselte Verbindung vom Client zum Firmennetzwerk aufgebaut. Der Client wählt sich zuerst bei seinem Provider ein und baut dann automatisch einen verschlüsselten Tunnel zum VPN-Gateway auf. Alle Clients müssen mit einer speziellen Client-VPN-Software ausgestattet werden. Eine klassische Anwendung stellt die Anbindung von Außendienstmitarbeitern dar (in diesem Falle wird der Client als Roadwarrior bezeichnet).
@@ -410,11 +410,11 @@ OpenVPN bietet sich hier als eine Ideale Lösung an. Die Installation ist sehr e
  
 Hier sieht man wie sich ein System prima mit einer Umgebung in Verbindung setzt. Wir haben hierfür ein Beispiel für die Amazon World Services genommen. 
 
-<img src="\Bilder\Bild7.png" alt="Alt-Text" title="" /> <br>
+<img src="Bilder\Bild7.png" alt="Alt-Text" title="" /> <br>
  
 ### Vergleich
   
-<img src="\Bilder\Bild8.png" alt="Alt-Text" title="" /> <br>
+<img src="Bilder\Bild8.png" alt="Alt-Text" title="" /> <br>
 
 # Quellenverzeichnis
 Thema	Quelle
