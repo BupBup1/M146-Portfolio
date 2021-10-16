@@ -418,31 +418,39 @@ Hier sieht man wie sich ein System prima mit einer Umgebung in Verbindung setzt.
 
 # Quellenverzeichnis
 Thema	Quelle
-ISO 27000: Skript M146_Reader3-1 von Albrecht Philipp
+Sicherheit	https://www.evolit.ch/Portals/0/Content/04_Verifizierung/04-02_ISO27000/EVL_ISO27K-Info_V1-00.pdf
 
-Sicherheit:	https://www.evolit.ch/Portals/0/Content/04_Verifizierung/04-02_ISO27000/EVL_ISO27K-Info_V1-00.pdf
-
-Firewall: 	https://www.fortinet.com/de/products/next-generation-firewall
-Firewall:	https://www.fortinet.com/content/dam/fortinet/assets/data-sheets/FortiGate_FortiWiFi_60E_Series.pdf
-Firewall:	https://en.wikipedia.org/wiki/Next-generation_firewall
-
+Firewall 	https://www.fortinet.com/de/products/next-generation-firewall
+Firewall	https://www.fortinet.com/content/dam/fortinet/assets/data-sheets/FortiGate_FortiWiFi_60E_Series.pdf
+Firewall	https://en.wikipedia.org/wiki/Next-generation_firewall
 VPN	https://openvpn.net/
 VPN	https://nordvpn.com/
-
 Wartung	https://networkx.github.io/
+WAN (FTTH)	https://de.wikipedia.org/wiki/Glasfasernetz#Fibre_to_the_home
 
-WAN (FTTH):	https://de.wikipedia.org/wiki/Glasfasernetz#Fibre_to_the_home
+WAN (FTTH)	https://community.fs.com/de/blog/the-advantages-and-disadvantages-of-fiber-optic-transmission.html
 
-WAN (FTTH):	https://community.fs.com/de/blog/the-advantages-and-disadvantages-of-fiber-optic-transmission.html
+WAN (Satellit)	https://de.wikipedia.org/wiki/Internetzugang_%C3%BCber_Satellit#Vorteile
 
-WAN (Satellit):	https://de.wikipedia.org/wiki/Internetzugang_%C3%BCber_Satellit#Vorteile
+WAN (Kabel)	http://www.appenzeller-online.de/kabel/kabel-internet-oder-dsl.htm
 
-WAN (Kabel):	http://www.appenzeller-online.de/kabel/kabel-internet-oder-dsl.htm
+WAN (xDSL)	
+Server:
+Dedicated,
+InHouse,
+Shared	Dedicated
+ Inhouse
+ Shared
 
-WAN: 	https://www.0und1.net/index.php/wanbuendelung
+Übertragungsrate	Produkt
 
-Monitoring:	https://www.comparitech.com/net-admin/network-monitoring-tools/
+Monitoring	https://www.comparitech.com/net-admin/network-monitoring-tools/
 
+WAN 	https://www.0und1.net/index.php/wanbuendelung
 
+ 
+Glossar
 
+Thema	Abkürzung	Erklärung
+Firewall	NGFW	NGFW steht für Next Generation Firewall und ist eine Firewall der dritten Generation. Das spezielle an dieser Technologie ist, dass weitere Applikationen zur ursprünglichen Firewall hinzugefügt werden. Das bedeutet, viele NGFW haben eine eigene VPN Funktion, eine application firewall welche deep packet inspection, tls/ssl inspection, bandbreitenmanagement und antivirus inspection unterstützt. Das Ziel von NGFWs ist, weitere OSI Layers zu untersuchen und z.B. direkt in den Inhalt von PDFs in Email Anhängen zu schauen, was Der Application Layer ist.
 		
