@@ -29,17 +29,17 @@ Begründung für Unser Entscheid:
 * Garantierte Symmetrische Bandbreiten bis zu 10 Gbit/s auf Glasfaser.
 * Möglichkeit für ein Mobile Backup
 * Service Down Time Frei wählbar, <br>
-	* SDT4= Störungsbehebung innert 4H
-    * SDT1 Light= Störungsbehebung innert 1h (Router Redundanz vorhanden)
-  * SDT1= Störungsbehebung innert 1h (Router Redundanz vorhanden + getrennte Wegführung [2te Abgetrennte Leitung])
-  *  Störungsannahme, 24/7 Hotline
-   * Proaktive Überwachung des Backbones
-    * Supportzeite in in 3 Ausprägungen:
-      * Standard Support= Mo-Fr 07:00-18:00
-      *  Extended Support= Mo-Sa 06:00-22:00
-      * Full Support= 7 x 24H
-      *  Möglichkeit für eine Störungsbehebung ausserhalb der Supportzeiten (Kostenpflichtig)         	
-      *  Auslastungsstatistik im Kundencenter ersichtlich.
+* SDT4= Störungsbehebung innert 4H
+* SDT1 Light= Störungsbehebung innert 1h (Router Redundanz vorhanden)
+* SDT1= Störungsbehebung innert 1h (Router Redundanz vorhanden + getrennte Wegführung [2te Abgetrennte Leitung])
+* Störungsannahme, 24/7 Hotline
+* Proaktive Überwachung des Backbones
+* Supportzeite in in 3 Ausprägungen:
+* Standard Support= Mo-Fr 07:00-18:00
+* Extended Support= Mo-Sa 06:00-22:00
+* Full Support= 7 x 24H
+* Möglichkeit für eine Störungsbehebung ausserhalb der Supportzeiten (Kostenpflichtig)         	
+* Auslastungsstatistik im Kundencenter ersichtlich.
                            	
 Bei diesem Produkt ist zudem noch eine Dual Provider Solution möglich.
  
