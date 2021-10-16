@@ -19,7 +19,7 @@ Datum Präsentation: 28.09.2021 <br>
   - [Internetanbindung für ein Unternehmen realisieren.](#internetanbindung-für-ein-unternehmen-realisieren)
   - [17.09.2021 - 28.09.2021](#17092021---28092021)
 - [2. Inhaltsverzeichnis <omit in toc>](#2-inhaltsverzeichnis-omit-in-toc)
-  - [Auftrag test](#auftrag-test)
+  - [Auftrag](#auftrag)
   - [Ausgangslage](#ausgangslage)
   - [Themen](#themen)
     - [Übertragungsrate, Verfügbarkeit](#übertragungsrate-verfügbarkeit)
@@ -30,11 +30,15 @@ Datum Präsentation: 28.09.2021 <br>
     - [Cable](#cable)
     - [Radiolink](#radiolink)
     - [Satellit](#satellit)
-  - [Vergleich](#vergleich)
+  - [Welche Technologie ist für unsere Situation am besten geeignet?](#welche-technologie-ist-für-unsere-situation-am-besten-geeignet)
+  - [Ausfallsicherheit und Backupleitung](#ausfallsicherheit-und-backupleitung)
+  - [Welche Verbindung eignet sich auch für Backup-Leitungen?](#welche-verbindung-eignet-sich-auch-für-backup-leitungen)
   - [Internet Services](#internet-services)
     - [Dedizierte Server (Root-Server):](#dedizierte-server-root-server)
     - [Services beim Provider (Shared Hosting):](#services-beim-provider-shared-hosting)
-    - [Vergleich](#vergleich-1)
+  - [Einfache Webpräsenz](#einfache-webpräsenz)
+  - [Komplexe Datenbankanwendung mit PHP für den Kundenzugriff](#komplexe-datenbankanwendung-mit-php-für-den-kundenzugriff)
+    - [Vergleich](#vergleich)
   - [Sicherheit](#sicherheit)
     - [ISO Reihe 27000](#iso-reihe-27000)
     - [Vertraulichkeit](#vertraulichkeit)
@@ -50,17 +54,19 @@ Datum Präsentation: 28.09.2021 <br>
   - [Wartung / Überwachung](#wartung--überwachung)
     - [Wireshark](#wireshark)
     - [PRTG](#prtg)
+    - [LAN Guard](#lan-guard)
     - [Solar Winds Netowrk Performance](#solar-winds-netowrk-performance)
-    - [NetworkX](#networkx)
+    - [Splunk](#splunk)
     - [Wartung](#wartung)
-    - [Vergleich](#vergleich-2)
+    - [Vergleich](#vergleich-1)
   - [Firewall](#firewall)
+    - [Günstige Firewalls](#günstige-firewalls)
     - [Anforderungen](#anforderungen)
     - [Optional](#optional)
     - [PC-Lösung mit Linux](#pc-lösung-mit-linux)
     - [Anforderungen](#anforderungen-1)
     - [Firewall-Service des Providers](#firewall-service-des-providers)
-    - [Vergleich](#vergleich-3)
+    - [Vergleich](#vergleich-2)
   - [VPN](#vpn)
   - [VPN-Achitekturen](#vpn-achitekturen)
     - [Site-to-Site VPN](#site-to-site-vpn)
@@ -69,14 +75,14 @@ Datum Präsentation: 28.09.2021 <br>
     - [Hardwarelösung](#hardwarelösung)
     - [VPN-Service des Providers](#vpn-service-des-providers)
     - [PC-Lösung mit Windows oder Linux](#pc-lösung-mit-windows-oder-linux)
-    - [Vergleich](#vergleich-4)
+    - [Vergleich](#vergleich-3)
 - [Quellenverzeichnis](#quellenverzeichnis)
 
 
 
 <br>
  
-## Auftrag test
+## Auftrag
 Sie untersuchen in Gruppen die unten aufgeführten Themen im Zusammenhang mit der Internetanbindung eines Unternehmens. Dazu sollen Sie zu jedem Thema:
 -  Zu jedem Thema die Leitfragen bearbeiten. Neue Fachwörter erklären und Zusammenhänge möglichst in einer grafischen Darstellung visualisieren.
 -  verschiedene Realisierungsmöglichkeiten (-Varianten) zeigen und erläutern.
@@ -93,26 +99,30 @@ Die Dokumentation soll im Sinne eines Leitfadens Ihre gesammelten Erkenntnisse, 
 Zu zwei Themen soll auch eine Entscheidungstabelle erstellt werden und eine Entscheidungstabelle soll in der Präsentation vorgestellt werden. Für einen konkreten Einsatzfall sollen Sie zu einem Entscheid für eine bestimmte Variante kommen. 
 
 ## Ausgangslage
-Ein Unternehmen hat einen veralteten Internetzugang mit einer Übertragungsrate von 50 Mbit/s im Download und 5 Mbit/s im Upload mit ADSL. Die Firma produziert Kaffeemaschinen in einer städtischen Gegend in der Schweiz. Das Marketing nutzt moderne Webapplikationen mit viel Multimedia Anwendungen und ein Shop für Endkunden ist ebenfalls vorhanden. Alle Mitarbeitenden benutzen Mail und Browser Applikationen. Die Firma hat 120 Internetnutzer. Eine Firewall ist nicht vorhanden und die Server stehen alle beim Provider.
+Ein Unternehmen hat einen veralteten Internetzugang mit einer Übertragungsrate von 50 Mbit/s im Download und 5 Mbit/s im Upload mit ADSL. Die Firma produziert Kaffeemaschinen in einer städtischen Gegend in der Schweiz. Das Marketing benutzt moderne Webapplikationen mit viel Multimediaanwendungen und ein Shop für Endkunden ist ebenfalls vorhanden. Alle Mitarbeiten-den benutzen Mail und Browserapplikationen. Die Firma hat 90 Internetnutzer.
+Eine Firewall ist nicht vorhanden und die Server stehen alle beim Provider.
+
 
 
 ## Themen
 ### Übertragungsrate, Verfügbarkeit
 
-Da die Server momentan noch bei dem Provider sind, müsste man die Internet Leitung auf
-250- 500Mbit/s Kupfer aufbessern. Pro User sollten mindestens 2Mbit/s verfügbar sein. Da aber nicht alle User zur gleichen Zeit online sind, bekommt jeder User sowieso mehr. Für den Mail Verkehr empfiehlt es sich, den Upload Bereich gleichzusetzen.
-Vor allem im Downloadbereich. Da die Kommunikation vom Provider aus zur Firma stattfindet.
+Da die Server momentan noch bei dem Provider stehen, wäre es empfehlenswert den Internetzugang mit SDLS zu verwenden damit der Down- und Uploadspeed die gleiche Übertragunsrate bietet. Da die Server nicht Inhouse stehen, müssen viele Daten täglich auf die Server hochgeladen werden, da ist ein guter Uploadspeed ebenfalls so wichtig wie der Downloadspeed. Da die meisten SDLS Anbieter auf 100Mbit/s limitiert sind, wäre eine Glasfaser Verbindung zu Empfehlen. Durch die Städtischen Gegend sollte ein Glasfaser Zugang kein Problem sein und die Kosten sollten den Rahmen auch nicht sprengen. In der Schweiz bieten Provider Glasfaser mit einer Rate von bis zu 10Gbit/s an. Mit dieser Rate, können die Mitarbeiter effizient und mit wenig Verzögerung Arbeiten. Durch dieses Upgrade wäre die Firma für die nächsten Jahre sehr gut ausgerüstet und muss in nächster Zeit mit keiner weiteren Investiotion in dem Bereich des Internetzugangs rechnen.
 
 ### Wie viel bei Internen Server:
 
- Bei internem Server sollte die Internet Leitung so ausgelegt sein, dass eine Ausfallsicherheit vorhanden ist. Zum Beispiel, Dual Provider Lösung (2 Internet Anbieter [z.B. Leitung von Swisscom und von Sunrise]) oder ein Provider mit Ausfallsicherheit (z.B. Mobile oder DSL Backup). Ein gutes SLA ist ein grosses Plus für den eigenen Betrieb. Somit können Ausfälle innert kürzester Zeit behandelt werden. Der Provider sollte zudem eine 24/7H Hotline zur Verfügung stellen.
+Wenn die Server inhouse verwaltet werden, fällt beim Upload Speed die Gewichtung schwächer aus. Trotzdem würden wir weiterhin bei einem Internetzugang mit Glasfaser bleiben, weil die Schweizer Städte bereits sehr gut mit Glasfaser Verbindung ausgestattet sind. Die modernen Webapplikationen und Multimediaanwendungen können nur mit einem guten Internetzugang reibungslos funktionieren, weshalb eine Investiton in den Bereich Glasfaser Verbindung eine gut Wahl ist. Auch wenn die Firma in den nächsten Jahren noch weiterhin wächst und sich die Mitarbeiterzahl vergrössert wird eine Glasfaser Leitung mit 1Gbit völlig aussreichen. Vielleicht müsste man noch auf eine 10Gbit/s Leitung gehen, falls der Webshop viel Bandbreite verbraucht.
+Wir empfehlen der Firma noch eine Firewall zu installieren, da ohne eine Firewall eine grosse Sicherheitslücke besteht. Da alle Mitarbeiter mit dem Internet Arbeitet, könnte jeder Mitarbeiter ein potentielles Sicherheitsrisiko sein.
 
-1. Fall 1, Ausfall von 10h: <br>
-Die Leitung sollte so gewählt werden, dass die Ausfallszeit nicht grösser als 8h sein sollte, somit hat der Kunde 2 Stunden Reserve, falls es der Provider die Störungsbehebung innert 8h nicht zum Laufen schafft. Sobald es über die 10h Grenze gelingen würde, würde das Geschäft Schäden davontragen.
+1. Fall 1, Ausfall von 10h tolerierbar: <br>
+Bei der suche nach dem richtigen Angebot, sollte die Ausfallzeit nicht grösser als 8h sein, dadurch hätte der Kunde noch 2h Zeit übrig, Falls das Problem nicht innerhalb der 8h gelöst werden kann. Bei einem Ausfall von über 10h würde das Geschäft grösse Schäden davontragen. Damit der Provider dieser Pflicht auch nachgeht ist es wichtig vorab bereits in einem Vertrag die SLA's zu definieren und zu bestätigen.
+Ebenfalls wichtig ist dabei darauf zuachten, dass der Support eine gute Verfügbarkeit hat und bei Störungen aktiv Kommuniziert wird, wie es mit der Problem Lösung voran geht. 
 
-2. Fall 2, Ausfall von 4h: <br>
-Bei diesem Case verschärft sich die Lage betreffend der Verfügbarkeit. Die Verfügbarkeit muss so gewählt werden, dass der Provider innert 2h das Problem bereits beseitigt haben sollte. Somit hat der Kunde immer noch 2H auf Reserve.  Hier sollte in Betracht gezogen werden, die Leitung mit Redundanz oder mit zusätzlichem Backup aufzubauen.
-Somit kann der Kunde bei grösserem Ausfällen, welche nicht in 4H behoben werden können, sich immer noch auf die Redundanz-Lösung verlassen.
+2. Fall 2, Ausfall von 4h nicht tolerierbar: <br>
+Wenn bereits ein Ausfall von 4h nicht mehr toleriert werden kann, müsste jedes Problem nach 3h gelöst sein, damit im Notfall noch 1h als reserve vorhanden wäre. Bei einer solchen Situation wäre es am besten zwei Internetanbindungen von unterschiedlichen Provider zu haben, damit man bei einem Ausfall auf die zweite Verbindung zurückgreifen kann. Dadurch wäre eine Verfügbarkeit von 99.9% realistisch.
+Die Kosten für eine Redundante Internetanbindung sind natürlich höher aber falls dadurch nur ein Ausfall von mehr als 4h verhinder werden kann, haben sich die erhöhten Kosten ausbezahlt. Auch wenn es dadurch eine erhöhte Verfügbarkeit gibt, müssen trotzdem zwingen SLA's mit den beiden Providern definiert werden, damit sie auch in der Pflicht sind die Probleme trotzdem innerhalb von 3h zu lösen.
+
+
 
  
 Provider:
@@ -153,59 +163,61 @@ Somit kann die Leitung an die exakten Bedürfnisse des Kunden angepasst werden, 
 xDSL ist eine Sammelbezeichnung für ADSL, HDSL, SDSL, SHDSL, UDSL und VDSL.
 
 Vorteile:<br>
-Mit vDSL hat man eine tiefe Latenzzeit. Man hat auch mehrere Anwendungsmöglichkeiten, wie zum Beispiel UHD Fernseher, HD-(Video) Telefonie. Es ist eine gute Alternative für Geschäftskunden. Als zweite Lösung ist vDSL nicht die schlechteste Wahl. Im Ausbau ist es billiger als Glasfaser. 
+Mit vDSL ist eine Downloadspeed von bis zu 250Mbit/s und eine Uploadspeed von bis zu 40Mbit/s möglich. vDSL ist bekannt, wegen seiner tiefen Latenzzeit. Ein grosser Vorteil sind, die geringen Kosten im Ausbau im Vergleich zu Glasfaser. 
+
 
 Nachteile:<br>
-Im Vergleich zu DSL hat es eine tiefere Verfügbarkeit. vDSL ist ungefähr 10 – 20 % teurer als DSL. Für VDSL braucht man spezielle VDSL-Router und VDSL Modems. Man muss dafür extra noch dafür das kaufen. Bei grosser Entfernung sinkt die Leistung zum DSLAM stark ab. 
+vDSL ist nochmals 10% - 20% teuerer als DSL. Wenn man vDSL verwenden möchte, benötigt man noch spezielle vDSL-Router und vDSL Modems. Bei grösseren Entfernungen sinkt, die Leistung von DSL stark ab. Die Zukunft gehöhrt eher Glasfaser und in den Schweizer Städten ist der grösser Anteil bereits mit Glasfaser versehen. 
 
 <br>
 
 ### Fibre (FTTH)
 Vorteile:<br>
-Ein grosser Vorteil gegenüber allen anderen Technologien ist, das FTTH auch die Leistung erbringt, die man bezahlt. Der Up- und Downstream sind symmetrisch das heisst, dass man zum Beispiel 500 MB/s Downstream hat und auch 500 MB/s Upstream. Glasfaser hat auch eine höhere Stabilität, da man nicht beeinträchtigt ist, ob der Nachbar etwas herunterlädt. Bei anderen Technologien spielt das eine Rolle, ob der Nachbar etwas herunterlädt, dann ist die Bandbreite tiefer.
+Glasfaser bietet eine stabile und schnelle Internetanbindung. Es sind Geschwindigkeiten von bis zu 10Gbit's möglich, welche mit alternativen Internettechnologien nicht verglichen werden können. Bei der Glasfaser Technologie hat man den grossen Vorteil, dass es nicht entscheidend ist, ob der Nachbar grosse Datenmengen herunterlädt.
+
 Nachteile:<br>
-Glaskabel hat einen sehr grossen Nachteil, da wenn das Kabel etwas beschädigt wird zum Beispiel, wenn man es knickt dann sind die Glasfaser gebrochen und man wird nicht mehr auf die Leistung kommen, die man eigentlich gewohnt ist. Gegenüber Radiolink hat Glasfaser eine kleine Verzögerung. Das ist ein Grund warum bei den Börsen Frankfurt am Main und London auf Radiolink zurückgegriffen wird.
+Glaskabel hat einen sehr grossen Nachteil, da wenn das Kabel etwas beschädigt wird zum Beispiel, wenn man es knickt dann sind die Glasfaser gebrochen und man wird nicht mehr auf die Leistung kommen, die man eigentlich gewohnt ist. Gegenüber Radiolink hat Glasfaser eine kleine Verzögerung. Das ist ein Grund warum bei den Börsen Frankfurt am Main und London auf Radiolink zurückgegriffen wird. In einigen Regionen in der Schweiz ist es noch nicht möglich eine Glasfaser Verbindung zuhaben. Falls man eine Glasfaser Verbindung haben will, muss man mit höheren Kosten rechnen als z.B. bei einem Cable Anschluss.
 
 <br>
 
 ### Cable
 Vorteile:<br>
-Cable hat eine sehr hohe Bandbreite, die Geschwindigkeit kann sogar mit DSL konkurrieren. Über grosse Distanz verliert die Technologie wenig an Bandbreite. Damit ist die Geschwindigkeit nicht abhängig von der Distanz.
+Cable hat eine sehr hohe Bandbreite, die Geschwindigkeit kann sogar mit DSL konkurrieren (bis zu 1000 Mbit/s). Über grosse Distanz verliert die Technologie wenig an Bandbreite. Damit ist die Geschwindigkeit nicht abhängig von der Distanz. Cable ist im Vergleich zu anderen Internettechnologien sehr günstig.
 
 Nachteile:<br>
-Alle die Cable haben hängen an einem Cluster. Das heisst, wenn der Nachbar eine 1 GB Datei herunterlädt habe ich weniger Bandbreite zur Verfügung da er etwas herunterlädt. An diesem Cluster ist nicht nur mein Nachbar, sondern auch viele andere in der Umgebung. Je nach Hausinstallation muss man Änderungen im jeweiligen Haushalt Netz vornehmen. Bei alten Gebäuden könnte dies schwierig gestalten, da die Kabel von dazumal nicht mehr den Standards entsprechen.
+Alle die Cable haben hängen an einem Cluster. Das heisst, wenn der Nachbar eine 1 GB Datei herunterlädt habe ich weniger Bandbreite zur Verfügung da er etwas herunterlädt. An diesem Cluster ist nicht nur mein Nachbar, sondern auch viele andere in der Umgebung. Je nach Hausinstallation muss man Änderungen im jeweiligen Haushalt Netz vornehmen. Bei alten Gebäuden könnte dies schwierig gestalten, da die Kabel von dazumal nicht mehr den Standards entsprechen. Generell ist Cable eher eine ältere Technologie die in der Zukunft immer mehr an Bedeutung verlieren wird.
 
 <br>
 
 ### Radiolink
 
 Vorteile:<br>
-Bei Richtfunk hat man keine Verzögerung, da es wird alles über Echtzeit übertragen. Keine andere Technologie überträgt die Daten in Echtzeit. Mit dieser Technologie kann man grosse Distanzen überbrücken. Richtfunk ist eine kostengünstige Technologie. Man kann es mit kleinem Budget die Technologie in Betrieb nehmen. Die grösste Ausfallsicherheit hat Radiolink.
+Bei Radiolink hat man keine Verzögerung, da alles über Echtzeit übertragen wird. Keine andere Technologie überträgt die Daten in Echtzeit. Mit dieser Technologie kann man grosse Distanzen überbrücken. Radiolink bietet ebenfalls die beste Ausfallsicherheit und ist eine kostengünstige Technologie. 
 
 Nachteile: <br>
-Wenn, man diese Technologie in der Nähe von Flughäfen einsetzen möchte, muss man sich das nochmals überdenken. Da der Radiolink das Anflugradar stören kann. Wenn, zwei verschiedene Haushalte die gleiche Frequenz verwenden kann es zu Problemen kommen und die Datenpakete kommen nicht mehr an. 
+Wenn, man diese Technologie in der Nähe von Flughäfen einsetzen möchte, muss man sich das nochmals überdenken. Da der Radiolink das Anflugradar stören kann. Weil Radiolink die Signale auf unterschiedlichen Frequenzen verschickt, kann es zu Problemen kommen, wenn zwei Haushalte nebeneinander das gleiche Signal verwenden.
 
 <br>
 
 ### Satellit
 
 Vorteile: <br>
-Es wird kein fester Standort benötigt. Wenn, man den Ort viel ändert, ist es die beste Wahl. Deswegen haben auch Flugzeuge und Schiffe es eingebaut. Die einzige Bedingung ist, dass der Nutzer im Radius des Satelliten ist. Die bestehende Internetverbindung kann auch zum Telefonieren genutzt werden. Das ist praktisch, wenn man auf hoher See ist und kein Netz mehr hat.
+Der grösste Vorteil von Satelliten ist, dass man den Standort ständig ändern kann und trotzdem immer ein Signal hat, solange man im Radius des Satelites ist. Die Meisten Schiffe und Flugzeuge haben diese Technologie eingebaut, um genau diesen Vorteil nutzten zu können. Diese Internetverbindung kann man auch zum Telefonieren verwenden, was auf z.B. auf dem Meer ein praktisch ist, da es dort ansonsten kein Signal gibt.
  
 Nachteile: <br>
-Ein grosser Nachteil ist die Geschwindigkeit. Im Vergleich zu anderen Technologien ist es sehr langsam. Dazu kommt, das mit den Latenzen zwischen 500ms und 700ms eine grosse Verzögerung hat. Im Vergleich, ein Modem hat eine Latenz von 150-200ms. TCP ist nicht für so eine hohe Latenz ausgelegt. Da ein Slow Start die Datenübertragungsrate nicht sehr erhöht. 
+Leider bietet die Satelliten Technologie eine sehr langsame Geschwindigkeit (max. 150Mbit/s), aufgrund der hohen Distanz, welche das Signal zurücklegen muss. Ebenfalls gibt es noch grösser Verzögerungen der Latenz zwischen 500ms und 700ms, was bei dem TCP Protokoll zu Problemen führen kann.
 
-## Vergleich
-Alle Technologien haben seine Vorteile, manche haben mehr und manche weniger. FTTH ist für einen fixen Standort am besten, solange man nicht die Daten in Echtzeit übertragen muss. Wenn, man kein Börsenunternehmen ist und einen fixen Standort hat und nicht immer den Ort wechselt, ist FTTH die beste Lösung. Wenn man aber ein Börsenunternehmen ist, muss man auf Radiolink setzen, da Radiolink die einzige Technologie ist, die ohne Verzögerung Daten übertragen kann. Aber man darf das Unternehmen nicht zu nahe an einem Flughafen haben, da die Flugzeuge gestört werden können. Wenn man den Standort ständig ändert, wie auf dem Meer oder an sehr abgelegenen Orten der Welt, wäre die Satelliten Technologie nicht die schlechteste Wahl, da die Satelliten überall einsetzbar wären und zugleich kann man über die gleiche Leitung telefonieren. Kabel Internet ist praktisch, wenn man zu Hause nicht noch mehr Geld fürs Internet investieren will. Wenn, man wenig Internet braucht, lohnt es sich nicht auf FTTH upzugraden. 
+## Welche Technologie ist für unsere Situation am besten geeignet?
+Für unsere Situation eignet sich die ein Glasfaseranschluss (FTTH) am besten. Mit dieser Technologie hat man die bestmögliche Geschwindigkeit und für die Zukunft ist man gut vorbereitet. Die Mitarbeiter des Unternehmens benötigen für meiste Zeit der Arbeit das Internet, weshalb eine gute Verbindung die Arbeitseffizienz steigern kann. Ein Unternehmen mit 90 Mitarbeitern benötigt einen solchen Anschluss, da ansonsten keine angenehme Geschwindigkeit gehalten werden kann. Die Verfügbarkeit der Glasfaser Technologie ist ebenfalls ein entscheidender Faktor in der Wahl der Internetanbindung. Die Kosten für den einbau der Glasfaser Verbindung kann teurer kommen als bei anderen Technologien, dafür ist es eine einmalige Investition, welche die nächsten Jahre auch bestehend bleiben kann.
 
 
+## Ausfallsicherheit und Backupleitung
+Die Ausfallsicherheit wird von den Provider angegeben. Meistens werden unterschiedliche Methoden verwendet um die Ausfallzeit zu Berechnen. Heutzutage wird oft die Methode des MTBF (Mean Time Between Failures) verwendet. Die meisten Provider werden ca. die gleichen Werte bei der Verfügbarkeit anbieten. Dabei muss man bei Vertragsabschlusses die SLA's beachten, in denen die Verfügbarkeit definiert ist.
+Die Glasfaser Technologie hat noch den Vorteil, das anstelle von elektrischen Signalen Licht verwendet um die Daten zu transferieren, weshalb Magnetfelder oder Starkstromleitungen zu keinen Problemen führen. Jedoch hat Glasfasern das Problem, dass es sehr empfindlich auf Verbiegungen ist, was bei Kupfer Kabel wesentlich besser ist.
 
-Die Hauptlösung ist unterschiedlich, da die Unternehmen verschiedene Prioritäten haben.Deswegen ist kann man nicht so einfach pauschal zu sagen, was am besten die Backup Lösung ist. Wenn man einen fixen Standort hat würde ich auf Cable setzen, da 
-
-Bei einem Mobilen standort würde ich Satellit als backup Lösung nehmen. Bei den Mobilen Standorten muss man selten grosse Dateien hin und her schicken.Bei abgelegenen Orten ist man alleine und muss nicht mit vielen die Bandbreite teilen. 
-
-Die höchste Ausfallsicherheit haben DSL, Kabel und Satellitenfunk. Das kann man aber nochmals verbessern, indem man zum Beispiel DSL und Kabel miteinander kombiniert. Die Ausfallsicherheit wird nie 100% sein, aber man hat es auf das minimum reduziert. Je näher man auf die 100% zu steuert desto mehr Geld für wenige 0.1% in die Hand nehmen. 
-
+## Welche Verbindung eignet sich auch für Backup-Leitungen?
+Die höchste Ausfallsicherheit haben DSL, Kabel und Satellitenfunk. Wenn bei zwei Technologien kombiniert hat man natürlich nochmals eine weitere Sicherheit. Trotzdem wird es nicht möglich sien eine Verfügbarkeit von 100% zu gewährleisten. Bei der Verfügbarkeit muss man immer bedenkten, je höher die Verfügbarkeit umso Teurer der Preis. 
+Viele Untenehmen nutzen heutzutage noch eine Backup Leitung über ein 4G Netz, welches bei einem Ausfall des Kabels automatisch auf das 4G Netzwerk wechselt. 
 <img src="Bild1.png" alt="Alt-Text" title="" />
 
   <br>
@@ -213,19 +225,17 @@ Die höchste Ausfallsicherheit haben DSL, Kabel und Satellitenfunk. Das kann man
   
 ## Internet Services
 3.1 Eigener Server (Inhouse):
-Vorteile:
-Vorteile: Volle Kontrolle über den Server, Günstiger Speicherplatz, einmalige Kosten bei der Beschaffung der Hardware, Volle Verantwortlichkeit über die Daten/Inhalte.
+Vorteile: 
+Über alle Daten hat man 100% Zugriffsmöglichkeiten. Falls man weiteren Speicherplatz benötigt, muss man nur die Kosten der Festplatte tragen. Generell muss die ganze Server Hardware einmalig bezahlt werden und nicht in Monatlichen oder Jährlichen Kosten.
+
 
 Nachteile: <br>
-Wartung, Stromzufuhr muss auf eigenes Risiko gewährleistet sein (z.B bei Stromausfall). Man ist selbst für die Redundanz bei Strom, Internet und Hardware verantwortlich.
-Volle Verantwortlichkeit über die Daten/Inhalte, Man muss sich selbst um das Backup-Konzept kümmern. Man muss schauen welche Hardware am Ende wirklich benötigt wird.
+Die Wartung des System muss man eigenständig durchführen, wofür ausgebildetes Personal benötigt wird. Ebenfalls ist das Person auch für die Sicherheit der Systeme Verantwortlich. Dazu gehört eine Zuverlässige Stromversorgung, ein Backupkonzept, Internetverbindung und vieles mehr.
  
 Text:
-Bei On-Premise-Lösungen sind die Investitionskosten zu Beginn hoch, zumal Leistungsreserven beim Server miteinberechnet werden müssen. Darüber hinaus müssen die laufenden Ausgaben für Wartung, Hardware und IT-Personal miteingerechnet werden. Mit der Abschreibung sinken die Kosten aber im Verlauf des System-Lebenszyklus.
-Unternehmen, die vor Ort hosten, können Änderungen im Setup unabhängig und selbstständig implementieren, sofern sie Fachleute dafür haben. Sie sind jedoch auch für alle Software-Upgrades und notwendige Systemerweiterungen selbst zuständig. Bei Inhouse Servern muss bei der Anschaffung die Dimensionierung sehr wohl überlegt werden und die Optionen für einen weiteren Ausbau zu späterem Zeitpunkt ist ein wichtiges Auswahlkriterium.
-Unternehmen haben mehr Kontrolle über die Implementierung, es dauert jedoch oft länger, bis der Server seinen Betrieb aufnehmen kann (Aufbau und Beschaffung des Systems).
-Bei Inhouse Servern ist die Organisation selbst für die Sicherheit zuständig. Das bedingt Fachleute, die ein den Anforderungen entsprechendes Business-Continuity- und Disaster-Recovery-Management aufsetzen. Dennoch sind Inhouse-Standorte in Katastrophensituationen meist anfälliger für Datenverlust (Brand+Wasser Schäden, das Backup muss zudem an einem 2ten Sicheren Standort aufbewahrt werden)
-Aber kritische Daten bleiben im Haus und sind immer unter eigener Kontrolle. Für den Zugriff auf die Daten ist das Unternehmen nicht auf eine funktionierende und genügend schnelle Internetverbindung angewiesen
+Zu Beginn fallen grosse Investitionkosten an, da die ganze Hardware und Lizenzen gekauft werden müssen. Ebenfalls muss geeignetes Personal für die Installation und zukünftige Wartung eingestellt werden. Falls neue Systeme implementiert werden sollen, kann das von dem Personal selbständig gemacht werden ohne dringende Hilfe von anderen Firmen. Dafür müssen aber auch alle Wartungen und Sicherheitsstandards einhalten. Bis ein Inhouse System Aufgebaut und installiert wurde, dauert es meist länger als bei einem Server System beim Provider. Da nicht durchgehend die Daten zum Provider hoch- und heruntergeladen werden müssen, wird die Internetleitung weniger belastet.
+Für kleinere Unternehmen ist diese Variante weniger geeignet, aufgrund der hohen Investitionskosten zu Beginn. Bei grösseren Unternehmen kann es Sinn machen die Systeme vor Ort aufzubauen, da man über die Daten immer 100% Zugriffskontrolle hat.
+
 
  
  
@@ -233,35 +243,47 @@ Aber kritische Daten bleiben im Haus und sind immer unter eigener Kontrolle. Fü
 ### Dedizierte Server (Root-Server):
  
 Vorteile:<br>
-Provider ist verantwortlich für Hardware, grosse Ausfallsicherheit (die Redundanz bei Strom, Internet und Hardware ist meistens vorhanden [je nach Angebot], Support, Höchste Flexibilität in der Zusammenstellung der Server nach Kunden Bedarf. Speicherplatz innert wenigen Minuten und in beliebiger Menge beziehen. Umfangreiche Netzwerkfunktionen (Firewalls, Load Balancer, interne Netze) nutzen. Bedarf jederzeit anpassbar, inkl. Minutengenauer Abrechnung. Eigene Programme können installiert werden. Servereinstellungen können an die eigenen Bedürfnisse bestmöglich angepasst werden
- 
+Der Provider ist in der Verantworlichkeit der Verfügbarkeit. Ebenfalls muss er die Systeme zur Verfügung stellen und je nach SLA's eine gewisse Verfügbarkeit bieten. Die Leistung und der Speicherplatz kann meisten X Beliebig erweitert werden ohne grosse Zeitliche Verzögerungen.
+
 Nachteile:<br>
-Bei Ausfällen ist man auf den Provider angewiesen. Die Kosten sind monatlich höher als ein Hauseigener Server. Über die Jahre hinweg bezahlt man mehr als für den eigenen Server. Der Server kann nur für einen bestimmten Zweck benötigt werden.
+Bei der Verfügbarkeit ist man 100% auf den Provider angewiesen. Die Kosten fallen generell monatlich an und sind über Jahre gesehen teuerer als eine Inhouse System Kosten würde. Ein Server wird für einen Zweck vorhergesehen.
+
  
 Text:
-Bei einem Dedicated Server handelt es sich um einen Server, der nur für einen bestimmten Zweck vorgesehen ist. Somit kann die komplette Leistung des Servers für die gewünschte Aufgabe verwendet werden.
-Ein Server wird in der Regel bei einem Provider, wie zum Beispiel 1&1 oder Strato, angemietet. Dieser Server lässt sich dann unter anderem als Proxy- oder Web-Server nutzen.
-Handelt es sich um einen Dedicated Server, wird dieser Server mit seiner kompletten Hardware nur von einem Kunden verwendet. Mieten Sie bei Angeboten einen Server für wenige Euro pro Monat, ist das meist nur möglich, da es sich dabei nicht um einen Dedicated Server handelt. Bei einem Dedicated Server ist man nur für das Betriebssystem und die Applikationen verantwortlich.
-Quelle: Dedicated Server
+Bei einem Dedicated Server handelt es sich um einen Server, der nur für einen bestimmten Zweck vorgesehen ist. Somit kann die komplette Leistung des Servers nur für eine Aufgabe verwendet werden.
+Die Server werden generell gemietet und die Kosten dafür fallen monatlich an. Bei einem Dedicated Server werden die Ressourcen des Servers nur von einem Kunden verwendet und nicht mit anderen geteilt. Dadurch unterscheidet sich ein Dedizierter Server vone einem Shared Hosting. Deshalb sind die kosten auch um einiges Höher, was dafür aber die Performance um einges erhöht.
+
  
 
 ### Services beim Provider (Shared Hosting):
 Vorteile:<br>
+Die Freischaltung des ausgewählten Dienstes/Abos erfolgt innerhalb von kurzer Zeit. Die Kosten fallen monatlich an, sind aber nur kleinere Beträge. Die Updates werden vom Provider automatisch aufgeschalten und für die Sicherheit ist er ebenfalls verantwortlich. 
 Freischaltung innert kurzer Zeit, man bezahlt kleine monatliche Kosten (man zahlt schlussendlich für das Abo/Dienst den man gewählt/benötigt hat), Updates werden vom Provider automatisch aufgeschaltet, Die Sicherheit der Plattform liegt in der Verantwortlichkeit des Providers. Fix fertige Lösungen werden vom Provider bereitgestellt.
 Bei solchen Angeboten (auch bekannt als: Shared Host) werden oft von mehreren Kunden verwendet, die sich somit die Leistung von einem Server teilen müssen.
  
 Nachteile:<br>
-Bei Ausfällen ist man auf den Provider angewiesen. Kein Zugriff auf Plattform, Upgrades auf dem Hosting werden durch den Provider bestimmt (in der Regel: keine Einflussnahme durch einzelne Kunden), Bandbreiten Begrenzung durch den Provider oder durch andere User. Bei bestimmten Angeboten kann Limitierter Speicherplatz zum Problem werden.
+Der gemietete Dienst/Abo läuft auf einem Server, worauf auch andere User Zugriff haben. Sprich die Server Ressourcen werden von mehreren Kunden zusammen geteilt.
+Bei Ausfällen ist man auf den Provider angewiesen. Kein Zugriff auf Plattform, Upgrades auf dem Hosting werden durch den Provider bestimmt und man kann als einzelner Kunde nicht mit entscheiden. Die Bandbreiten ist Begrenzung durch den Provider oder durch andere User. Bei bestimmten Angeboten kann Limitierter Speicherplatz zum Problem werden.
  
- 
+
 Text:
-Beim Shared Hosting hat man folgende Pflichten nicht:
-Die Aktualisierung und Instandhaltung des Servers und der installierten Software-Komponenten fällt komplett in den Aufgabenbereich des Providers. Da er aber auch dafür sorgen muss, dass alle Parteien ausschließlich Zugriff auf den eigenen Webserver und Webspace haben, sind die gewährten Zugriffsrechte anders als beim Dedicated Hosting deutlich eingeschränkt. Software-Installationen oder Änderungen an zentralen Serverkonfigurationen können daher nur durch den Anbieter selbst durchgeführt werden, wobei Sie zu diesem Zweck immer zunächst mit diesem in Kontakt treten müssen, was kurzfristige bzw. spontane Anpassungen unmöglich macht.
+Beim Shared Hosting hat man die möglichkeit günstig Dienste auszulagern und nicht mehr selber Verwaltung zu müssen. Durch die Abgabe der Verwaltung gibt man auch einen grossen Teil der Verantwortung ab. Der Provider ist für die Aktualisierung und Instandhaltung des Servers verwantwortlich. Dabei muss er ebenfalls beachten, dass die Zugriffsrechte auf andere Daten von Kunden eingeschränkt sind und die Ressourcen die gekauft werden dem Kunden auch zukommen. Der Anbieter selber bestimmt die einzelnen Serverkonfigurationen und man hat als einer von vielen Kunden kein grosses Mitsprachrecht. Anderungen an der Konfigurationen werden mitgeteilt, weshalb man sich zumindest frühzeitig auf Änderungen anpassen kann.
+
  
-Beste Lösung für den Kunden:
-Für diese Firma ist der Dedicated Server die beste Wahl, da bei diesem der Provider sich um das meiste kümmert, wie z.B. um die Ausfallsicherheit des Servers und Redundanz. Obwohl die Kosten bei der Hardware höher liegen, dürfen die Kosten der Redundanz nicht aus Betracht gelassen werden. Trotz den erhöhten Kosten muss sich der Endkunde um fast nichts kümmern.
-Das Backup-Konzept ist kann meist 2fach vorhanden sein, einmal beim Provider und zusätzlich kann eine Kopie der Daten beim Kunden hinterlegt werden. 
- 
+## Einfache Webpräsenz
+Eine Firma mit 10 Mitarbeiter benötigt zum Arbeiten lediglich eine einfache Website und Zugriff auf eine E-Mail Adresse.
+
+Für dieses Beispiel empfehlen wir ein Shared Hosting. Dabei kann man mit monatlichen fixen Kosten rechnen, welches nur sehr kleine Beträge sind. Solche Provider haben sicherlich auch bereits ein passendes Angebot, wodurch zwischen Kauf und Inbetriebnahme der beiden Dienste nicht viel Zeit vergeht. Eine Website und auch einfache E-Mails benötigen keine grossen Datenmengen, weshalb ein geteilter Server dafür völlig ausreicht. Ihre Daten werden vom Provider durch unterschiedliche Sicherheitskonzepte geschützt und ein Datenverlust ist eher unwahrscheinlich. Falls man die möglichkeit hat die Daten der Website und der E-Mail Postfächer zu exportieren, ist in Zukunft auch die Möglichkeit offen, wieder aus dem Shared Hosting zu gehen und eine Alternative in Betracht zu ziehen.
+
+## Komplexe Datenbankanwendung mit PHP für den Kundenzugriff
+Eine Firma hat 100 Mitarbieter und die Serverdienste müssen 24/7 zur Verfügung stehen, da die Kunden jederzeit darauf Zugreiffen wollen. Die Daten in der Datenbank enthalten Vertrauliche Dokumente und müssen vor Verlust wie auch vor Diebstahl gut geschützt werden. Mittlerweile ist die Datenbank sehr gross und es greiffen im Minutentakt Kunden aus der ganzen Welt darauf zu.
+
+Hier würden wir zu erst einmal den Root Server empfehlen. Bei dieser Wahl würde ein Server der Firma zur Verfügung stehen, welcher die passenden Ressourcen für die Datenbankanwendung hat. Die Inbetriebnahme würde schnell vonstatten gehen. Die Kosten fallen momatlich an und sind höher als bei einer Inhouse Lösung. Der Speicherplatz wäre ausreichend und falls er ergänzt werden sollte, kann das in kürzester Zeit erledigt werden. 
+Wenn die Daten aus rechtlichen Gründen nicht unter der Kontrolle des Providers sein dürften, könnte man auch eine Inhouse Lösung in betracht ziehen. Da muss man jedoch mit hohen Investitionskosten rechnen und ausgebildetes Personal finden.
+
+
+
+
 ### Vergleich
 
 <img src="Bild2.png" alt="Alt-Text" title="" />
@@ -287,7 +309,7 @@ Bei der Integrität geht es darum, wer auf welche Daten oder System Zugriffe hab
 * Welche Zugriffe haben Externe (VPN)?
 
 ### Authentizität und Authentisierung
-Netzwerkfähige Geräte sollten immer mit starken Passwörtern gesichert sein. Es muss immer klar sein, wer und wieso hat Zugriffe auf solche Systeme oder Geräten. Zudem muss man sich bei der Authentisierung diese Frage überlegen:
+Netzwerkfähige Geräte sollten immer mit starken Passwörtern gesichert sein. Es muss immer klar sein, wer und wieso hat jemand Zugriffe auf solche Systeme oder Geräten. Zudem muss man sich bei der Authentisierung diese Frage überlegen:
 
 * Welches Verfahren soll zum Einsatz kommen? 1,2 oder 3 Stufiges Konzept?
 * Sind Biometrische Daten auch erwünscht? (BSP: Physische Datacenter Zugriff) <br>
@@ -333,23 +355,41 @@ Zudem soll man jeden Dienst und Ort und die Zugriffsart gut dokumentieren.
 * Bei jeder Berechtigungsart muss ein Owner definiert und dokumentiert werden.
 * Genaue Dokumentation über zugriffskontrollen auf den Servern müssen laufend gemacht werden.
 
- 
+Sicherheitskonzept nach ISO 27000 für unser Beispiel:
+1. Vertraulichkeit: Die Daten auf der Website können als "Public" gekennzeichnet werden. Daten für Mitarbeiter wie z.B. Anleitungen und Dokumentation werden als Confidential markiert. Offerten können in die Kategorie Confidential und streng geheime Dokumente der Geschäftsleitung können als Secret vermerkt werden.
+2. Integrität: Bei dem Punkt Integrität muss nur definiert werden, welcher Mitarbeiter auf welche Daten Zugriff hat. Da es keine externe Mitarbeiter gibt, kann das einfacher definiert werden.
+3. Authentizität und Authentisierung: Dabei ist wichtig, das überall sichere Passwörter verwendet werden. Für die Mitarbeiter eine Richtlinie hinzugefügt werden, damit Mitarbeiter sichere Passwörter wählen müssen.
+4. Zurechenbarkeit: Hierbei müssen alle 90 Mitarbeiter mit einem persönlichen Account Arbeiten, um nachvollziehen zu können, welcher User was gemacht hat. E-Mails sollte zudem immer signiert werden.
+5. Nicht-Abstreitbarkeit: Beim Webshop müsste definiert werden, ob die Bestellungen via Mail oder via Web reinkommen sollen. 
+6. Verlässlichkeit: Da die Server alle inhouse sind, müssen da natürlich die Wartungen organisiert werden, die Backups in regelmässigen Abständen gemacht werden, Datenbanken regelmässig konsulieren und Patches regelmässig eingespielt werden.
+7. Zugriffskontrolle: Da alle Mitarbeiter intensiv mit dem Internet Arbeiten ist es wichig, dass diese nur auf bestimmte Websiten Zugriff haben. Diese Zugriffe müssen im voraus definiert werden und durch Programme sollten dann die verbotenen Websiten gesperrt werden.
+
+Wenn alle 7 Punkte eingehalten werden wird das Sicherheitskonzept nach ISO 27000 eingehalten und das Unternehmen ist Online geschützt unterwegs.
+
+
 ## Wartung / Überwachung
+Folgende Tools würden wir der Firma empfehlen, um ihren Internetzugang sicherzustellen:
 
 ### Wireshark
 Der Netzwerk-Sniffer Wireshark ist eine frei erhältliche Software, mit der sich Datenverbindungen auf Protokollebene mitlesen und auswerten lassen. So kann der Data Traffic im Netzwerk genau aufgenommen und analysiert werden. 
 
 ### PRTG
-PRTG überwacht die gesamte IT-Infrastruktur rund um die Uhr und informiert Sie über Probleme, bevor Nutzer sie überhaupt bemerken. Die Software dient dem Systemadministratoren ein effizienteres, schnelleres und besseres Arbeiten. PRTG bringt viele Features mit sich wie ein Benachrichtigungssystem, GUI, Cluster Failover Lösung, Maps und Dashboards, verteiltes Monitoring und detaillierte Berichte.
-5.1.3 LAN Guard
+Das PRTG überwacht ihr Netzwerk rund um die Uhr und, wenn das Netzwerk ein fehler hat, gibt die PRTG Software eine Fehlermeldung und markiert das Netzwerk mit Rot. Durch diese Software hat die Systemadministration einen guten Überblick über das System und kann Ausfälle schnell erkennen. Die PRTG hat viele zusatz Features wie ein Benachrichtigungssystem, GUI, Cluster Failover Lösung, Maps und Dashboards, verteiltes Monitoring und detaillierte Berichte.
+### LAN Guard
 Ohne Patch-Management ist Ihr Unternehmen zahlreichen Risiken ausgesetzt. Denn fehlende Updates sind die häufigste Ursache für Sicherheitslücken im Netzwerk. Mit GFI LanGuard lassen sich offene Schwachstellen schnell erkennen und rechtzeitig beheben, um Angreifern keine Chance zu geben. 
 
 <img src="Bild9.jpg" alt="Alt-Text" title="" /> <br>
 
 ### Solar Winds Netowrk Performance
-Die meisten Netzwerksicherheit Probleme treten auf, wenn Konfigurationen geändert werden. SolarWinds NPM kann diese identifizieren und viele automatisch beheben. Neben soliden Schwachstellen-Scans und erweiterten Optionen zur Erstellung und Überwachung von Richtlinien ist dies bei weitem die erste Wahl für Netzwerküberwachungssysteme.
-### NetworkX
-NetworkX ist ein Python-Paket für die Erstellung, Manipulation und Untersuchung der Struktur, Dynamik und Funktionen komplexer Netzwerke. Aufgrund der Verwendung einer reinen Python-Datenstruktur ist NetworkX ein recht effizientes, sehr skalierbares, hochportables Framework für die Analyse von sozialen und anderen Netzwerken.
+Netzwerksicherheitsprobleme treten meisst dann auf wenn man die Konfiguration ändert. Mit der Software SolarWinds NPM können diese fehler und Netzwerkkritischen kofigurationänderung Rückgängig gemacht und behoben werden. Neben soliden Schwachstellen-Scans und erweiterten Optionen zur Erstellung und Überwachung von Richtlinien ist dies bei weitem die erste Wahl für Netzwerküberwachungssysteme.
+
+
+### Splunk
+
+Dafür ist Splunk eine gute Wahl, wenn ein Log Tool benötigt wird. Es ist wichtig, eine Art von Log Mechanissmus in einer Firma zu haben. Dadurch kann man einfach an gewünschte Daten kommen.
+Splunk ermöglicht es verschiedene Dateien, Meztiken und auch Log Dateien anzuschauen und zu Filtern. Somit spart man sich viel Zeit, und bringt Struktur.
+
+ 
 
  
 ### Wartung
@@ -358,9 +398,7 @@ Der Prozess bei der Wartung läuft über ITSM und dem ITIL Prozess. ITSM ist ein
 * Datum (Start- & Enddatum) -> Einhaltung der SLA
 * Configuration Item
 * Collision Detection
-* Produkt Katalog
 * Risk Report
-* Notes
 
 Es muss genau angegeben werden, in welcher Zeitperiode die Wartung stattfindet. Diese soll im normalfall an einem Wochenende stattfinden, ausser es ist ein Notfall und dieser Change ist Betriebskritisch. 
 Der Configuration Item muss genau angegeben werden (Hostname und Mac Adresse).
@@ -375,22 +413,27 @@ Beim Produkt Katalog wird beschrieben, welche Applikationen oder Dienste davon b
  
 ## Firewall 
 Eine Firewall ist essentiell und es ist nur eine Frage der Zeit bis ein ungebetener Gast sich im eigenen Netzwerk umschaut, es führt also kein Weg an einer Firewall vorbei. Es gibt drei Arten von Firewall lösungen: Hardware-Firewalls, PC Lösungen und Firewall Services vom eigenen Provider z.B. Diese werden hier anschliessend verglichen.
-6.1.Günstige Hardware-Firewalls 
-Palo Alto ist im Bereich Netzwerksicherheit eine der Marktführenden Firmen. Es gibt sehr viele unterschiedliche Firewall Lösungen welche sie anbieten, für KMUs und Enterprise. Ich empfehle die PA-3020 Firewall. Diese NGFW hat einen Durchsatz von über 2 Gbit/s, unterstützt mehrere  VLANs, und bietet eine eigene VPN Lösung.  
+### Günstige Firewalls
+Die Fortigate ist einer der Markführenden Firewalls im KMU bereich. Sie unterstützt mit verschiedensten Features und Add ons gute Security defaults und man kann sehr gut schon das eigene Netzwerk überwachen. Diese NGFW hat einen Durchsatz von über 2 Gbit/s, unterstützt mehrere  VLANs, und bietet eine eigene VPN Lösung. Hier bei empfiehlt sich am besten die Fortigate 60E Edition.
+
 ### Anforderungen
 * Glasfaser Kabel
+* Internetanbindung
 
 ### Optional
 * Serverrack
+* Switch
+* Router
 
 
 ### PC-Lösung mit Linux
-OPNsense ist eine Open Source Firewall Lösung welche für FreeBSD entwickelt wurde und somit auch auf Linux läuft. Es werden Multi WAN, VPN, 2FA und viele weitere nützliche Features unterstützt. Der grosse Vorteil an OPNsense ist, dass es Open Source ist und es sich so zu 100% auf eigene Bedürfnisse anpassen. Ausserdem bietet OPNsense wöchentliche kostenlose Sicherheitsupdates. 
+OPNsense ist eine Open Source Firewall Lösung welche für FreeBSD entwickelt wurde und somit auch auf Linux läuft. Es werden Multi WAN, VPN, 2FA und viele weitere nützliche Features unterstützt. 
+Ein Grosser Vorteil von OPNSense ist das dieser Dienst kostenlos ist und er wird immer stetig verbessert. Durch Wöchentliche Securtiy updates von OPNSense ist man immer gut unterwegs mit der eigenen Netzwerk-Sicherheit 
 
 ### Anforderungen
-* Server mit FC Anschluss
 * Glasfaser Kabel
 * Linux als OS
+* Betriebssysteme 
 
 
 
@@ -408,7 +451,7 @@ Jeder Internet Provider hat bereits seine eigene Firewall. Damit kann man einen 
 Ein VPN ist ein Virtuellen Privates Netzwerk welches auf einer öffentlich zugänglichen Infrastruktur basiert. Ausschliesslich wer zu diesem netzwerk gehört und autorisiert ist kann mit andern Leuten in diesem Netzwerk kommunizieren. So können zum Beispiel Mitarbeiter einer Firma von zu Hause aus in das Firmennetzwerk zugriefen und die infrastruktur der Firma nutzen ohne direkt im Netzwerk sein zu müssen.
 ## VPN-Achitekturen
 ### Site-to-Site VPN
-Bei einem Site-to-Site VON werden zwei lokale Netzwerke durch VPN-Gateways verbunden. Es ist die simpelste und am weitesten verbreitete Form von VPNs. Bei einem Site-to-Site VPN werden zwei lokale Netzwerke über ein öffentliches Netzwerk (z.B. Internet). Die Kommunikation zwischen den beiden Gateways erfolgt verschlüsselt über einen Tunnel, während in den lokalen Netzwerken die Kommunikation weiterhin unverschlüsselt.
+Bei einem Site-to-Site werden zwei lokale Netzwerke durch VPN-Gateways verbunden. Es ist die simpelste und am weitesten verbreitete Form von VPNs. Bei einem Site-to-Site VPN werden zwei lokale Netzwerke über ein öffentliches Netzwerk (z.B. Internet).
 Der entscheidende Vorteil dieser Lösung liegt in der Tatsache, dass keine der lokalen Arbeitsstationen mit einer speziellen VPN-Software ausgestattet werden muss. Die Gateways übernehmen in diesem Fall die gesamte Gewährleistung der Sicherheit, weshalb das VPN für die im lokalen Netz befindlichen Rechner vollkommen transparent ist.
  
 ###  End-to-End VPN
@@ -428,9 +471,9 @@ Da viele NGFWs auch VPN unterstützen und es kaum Hardware gibt welche nur für 
 NordVPN ist ein VPN Service welcher anonymität im Internet gewährleistet. Verbindungen werden immer über einen VPN Server des Providers geleitet und sind zwischen dem Server und dem eigenen Computer immer verschlüsselt.
 
 ### PC-Lösung mit Windows oder Linux
-OpenVPN ist eine Software welche sowohl auf Linux als auch auf Windows geräten läuft. Man kann es ganz einfach installieren und anschliessend Zertifikate erstellen für jeden Client welcher sich verbinden können soll. Der Computer bzw der Server auf dem das interne Ende läuft, muss genügend Leistung haben.
+OpenVPN bietet sich hier als eine Ideale Lösung an. Die Installation ist sehr einfach und man kann Zertifikate für die jeweiligen Benutzer erstellen. Die Hardware bei der das interne Ende Läuft muss genügend Leistung haben. Am Besten empfiehlt sich hier ein Raspberry Pie als Umgebung zu nützen.
  
-Hier sieht man wie man OpenVPN in eine Cloudlösung integriert. Es lässt sich gleichzeitig mit Amazon, Google und Microsoft kombinieren was eine Integration in alle Systeme garantiert.
+Hier sieht man wie sich ein System prima mit einer Umgebung in Verbindung setzt. Wir haben hierführ ein Beispiel für die Amazon World Services genommen. 
 
 <img src="Bild7.png" alt="Alt-Text" title="" /> <br>
  
@@ -443,8 +486,8 @@ Hier sieht man wie man OpenVPN in eine Cloudlösung integriert. Es lässt sich g
 Thema	Quelle
 Sicherheit	https://www.evolit.ch/Portals/0/Content/04_Verifizierung/04-02_ISO27000/EVL_ISO27K-Info_V1-00.pdf
 
-Firewall 	https://www.infoguard.ch/en/partners/palo-alto-networks-next-generation-firewall
-Firewall	https://www.paloaltonetworks.com/products/secure-the-network/next-generation-firewall/pa-3000-series
+Firewall 	https://www.fortinet.com/de/products/next-generation-firewall
+Firewall	https://www.fortinet.com/content/dam/fortinet/assets/data-sheets/FortiGate_FortiWiFi_60E_Series.pdf
 Firewall	https://en.wikipedia.org/wiki/Next-generation_firewall
 VPN	https://openvpn.net/
 VPN	https://nordvpn.com/
@@ -477,6 +520,3 @@ Glossar
 Thema	Abkürzung	Erklärung
 Firewall	NGFW	NGFW steht für Next Generation Firewall und ist eine Firewall der dritten Generation. Das spezielle an dieser Technologie ist, dass weitere Applikationen zur ursprünglichen Firewall hinzugefügt werden. Das bedeutet, viele NGFW haben eine eigene VPN Funktion, eine application firewall welche deep packet inspection, tls/ssl inspection, bandbreitenmanagement und antivirus inspection unterstützt. Das Ziel von NGFWs ist, weitere OSI Layers zu untersuchen und z.B. direkt in den Inhalt von PDFs in Email Anhängen zu schauen, was Der Application Layer ist.
 		
-		
-		
-
