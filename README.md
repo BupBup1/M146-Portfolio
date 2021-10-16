@@ -211,12 +211,12 @@ Die Server werden generell gemietet und die Kosten dafür fallen monatlich an. B
 ### Services beim Provider (Shared Hosting):
 Vorteile:<br>
 Die Freischaltung des ausgewählten Dienstes/Abos erfolgt innerhalb von kurzer Zeit. Die Kosten fallen monatlich an, sind aber nur kleinere Beträge. Die Updates werden vom Provider automatisch aufgeschalten und für die Sicherheit ist er ebenfalls verantwortlich. 
-Freischaltung innert kurzer Zeit, man bezahlt kleine monatliche Kosten (man zahlt schlussendlich für das Abo/Dienst den man gewählt/benötigt hat), Updates werden vom Provider automatisch aufgeschaltet, Die Sicherheit der Plattform liegt in der Verantwortlichkeit des Providers. Fix fertige Lösungen werden vom Provider bereitgestellt.
+Freischaltung inert kurzer Zeit, man bezahlt kleine monatliche Kosten (man zahlt schlussendlich für das Abo/Dienst den man gewählt/benötigt hat), Updates werden vom Provider automatisch aufgeschaltet, die Sicherheit der Plattform liegt in der Verantwortlichkeit des Providers. Fix fertige Lösungen werden vom Provider bereitgestellt.
 Bei solchen Angeboten (auch bekannt als: Shared Host) werden oft von mehreren Kunden verwendet, die sich somit die Leistung von einem Server teilen müssen.
  
 Nachteile:<br>
 Der gemietete Dienst/Abo läuft auf einem Server, worauf auch andere User Zugriff haben. Sprich die Server Ressourcen werden von mehreren Kunden zusammen geteilt.
-Bei Ausfällen ist man auf den Provider angewiesen. Kein Zugriff auf Plattform, Upgrades auf dem Hosting werden durch den Provider bestimmt und man kann als einzelner Kunde nicht mit entscheiden. Die Bandbreiten ist Begrenzung durch den Provider oder durch andere User. Bei bestimmten Angeboten kann Limitierter Speicherplatz zum Problem werden. 
+Bei Ausfällen ist man auf den Provider angewiesen. Kein Zugriff auf Plattform, Upgrades auf dem Hosting werden durch den Provider bestimmt und man kann als einzelner Kunde nicht mit entscheiden. Die Bandbreite ist limitiert. Bei bestimmten Angeboten kann Limitierter Speicherplatz zum Problem werden. 
 
 Text:
 Beim Shared Hosting hat man die möglichkeit günstig Dienste auszulagern und nicht mehr selber Verwaltung zu müssen. Durch die Abgabe der Verwaltung gibt man auch einen grossen Teil der Verantwortung ab. Der Provider ist für die Aktualisierung und Instandhaltung des Servers verwantwortlich. Dabei muss er ebenfalls beachten, dass die Zugriffsrechte auf andere Daten von Kunden eingeschränkt sind und die Ressourcen die gekauft werden dem Kunden auch zukommen. Der Anbieter selber bestimmt die einzelnen Serverkonfigurationen und man hat als einer von vielen Kunden kein grosses Mitsprachrecht. Anderungen an der Konfigurationen werden mitgeteilt, weshalb man sich zumindest frühzeitig auf Änderungen anpassen kann.
@@ -224,13 +224,13 @@ Beim Shared Hosting hat man die möglichkeit günstig Dienste auszulagern und ni
 ## Einfache Webpräsenz
 Eine Firma mit 10 Mitarbeiter benötigt zum Arbeiten lediglich eine einfache Website und Zugriff auf eine E-Mail Adresse.
 
-Für dieses Beispiel empfehlen wir ein Shared Hosting. Dabei kann man mit monatlichen fixen Kosten rechnen, welches nur sehr kleine Beträge sind. Solche Provider haben sicherlich auch bereits ein passendes Angebot, wodurch zwischen Kauf und Inbetriebnahme der beiden Dienste nicht viel Zeit vergeht. Eine Website und auch einfache E-Mails benötigen keine grossen Datenmengen, weshalb ein geteilter Server dafür völlig ausreicht. Ihre Daten werden vom Provider durch unterschiedliche Sicherheitskonzepte geschützt und ein Datenverlust ist eher unwahrscheinlich. Falls man die möglichkeit hat die Daten der Website und der E-Mail Postfächer zu exportieren, ist in Zukunft auch die Möglichkeit offen, wieder aus dem Shared Hosting zu gehen und eine Alternative in Betracht zu ziehen.
+Für dieses Beispiel empfehlen wir ein Shared Hosting. Dabei kann man mit monatlichen fixen Kosten rechnen, welches nur sehr kleine Beträge sind. Solche Provider haben sicherlich auch bereits ein passendes Angebot, wodurch zwischen Kauf und Inbetriebnahme der beiden Dienste nicht viel Zeit vergeht. Eine Website und auch einfache E-Mails benötigen keine grossen Datenmengen, weshalb ein geteilter Server dafür völlig ausreicht. Ihre Daten werden vom Provider durch unterschiedliche Sicherheitskonzepte geschützt und ein Datenverlust ist eher unwahrscheinlich. Falls man die Möglichkeit hat, die Daten der Website und der E-Mail Postfächer zu exportieren, ist in Zukunft auch die Möglichkeit offen, wieder aus dem Shared Hosting zu gehen und eine Alternative in Betracht zu ziehen.
 
 ## Komplexe Datenbankanwendung mit PHP für den Kundenzugriff
-Eine Firma hat 100 Mitarbieter und die Serverdienste müssen 24/7 zur Verfügung stehen, da die Kunden jederzeit darauf Zugreiffen wollen. Die Daten in der Datenbank enthalten Vertrauliche Dokumente und müssen vor Verlust wie auch vor Diebstahl gut geschützt werden. Mittlerweile ist die Datenbank sehr gross und es greiffen im Minutentakt Kunden aus der ganzen Welt darauf zu.
+Eine Firma hat 100 Mitarbeiter und die Serverdienste müssen 24/7 zur Verfügung stehen, da die Kunden jederzeit darauf Zugreifen wollen. Die Daten in der Datenbank enthalten vertrauliche Dokumente und müssen vor Verlust wie auch vor Diebstahl gut geschützt werden. Mittlerweile ist die Datenbank sehr gross und es greifen im Minutentakt Kunden aus der ganzen Welt darauf zu.
 
-Hier würden wir zu erst einmal den Root Server empfehlen. Bei dieser Wahl würde ein Server der Firma zur Verfügung stehen, welcher die passenden Ressourcen für die Datenbankanwendung hat. Die Inbetriebnahme würde schnell vonstatten gehen. Die Kosten fallen momatlich an und sind höher als bei einer Inhouse Lösung. Der Speicherplatz wäre ausreichend und falls er ergänzt werden sollte, kann das in kürzester Zeit erledigt werden. 
-Wenn die Daten aus rechtlichen Gründen nicht unter der Kontrolle des Providers sein dürften, könnte man auch eine Inhouse Lösung in betracht ziehen. Da muss man jedoch mit hohen Investitionskosten rechnen und ausgebildetes Personal finden.
+Hier würden wir zuerst einmal den Root Server empfehlen. Bei dieser Wahl würde ein Server der Firma zur Verfügung stehen, welcher die passenden Ressourcen für die Datenbankanwendung hat. Die Inbetriebnahme würde schnell vonstattengehen. Die Kosten fallen monatlich an und sind höher als bei einer Inhouse Lösung. Der Speicherplatz wäre ausreichend und falls er ergänzt werden sollte, kann das in kürzester Zeit erledigt werden. 
+Wenn die Daten aus rechtlichen Gründen nicht unter der Kontrolle des Providers sein dürften, könnte man auch eine Inhouse Lösung in Betracht ziehen. Da muss man jedoch mit hohen Investitionskosten rechnen und ausgebildetes Personal finden.
 
 ### Vergleich
 
@@ -306,11 +306,11 @@ Zudem soll man jeden Dienst und Ort und die Zugriffsart gut dokumentieren.
 Sicherheitskonzept nach ISO 27000 für unser Beispiel:
 1. Vertraulichkeit: Die Daten auf der Website können als "Public" gekennzeichnet werden. Daten für Mitarbeiter wie z.B. Anleitungen und Dokumentation werden als Confidential markiert. Offerten können in die Kategorie Confidential und streng geheime Dokumente der Geschäftsleitung können als Secret vermerkt werden.
 2. Integrität: Bei dem Punkt Integrität muss nur definiert werden, welcher Mitarbeiter auf welche Daten Zugriff hat. Da es keine externe Mitarbeiter gibt, kann das einfacher definiert werden.
-3. Authentizität und Authentisierung: Dabei ist wichtig, das überall sichere Passwörter verwendet werden. Für die Mitarbeiter eine Richtlinie hinzugefügt werden, damit Mitarbeiter sichere Passwörter wählen müssen.
+3. Authentizität und Authentisierung: Dabei ist wichtig, dass überall sichere Passwörter verwendet werden. Für die Mitarbeiter eine Richtlinie hinzugefügt werden, damit Mitarbeiter sichere Passwörter wählen müssen.
 4. Zurechenbarkeit: Hierbei müssen alle 90 Mitarbeiter mit einem persönlichen Account Arbeiten, um nachvollziehen zu können, welcher User was gemacht hat. E-Mails sollte zudem immer signiert werden.
-5. Nicht-Abstreitbarkeit: Beim Webshop müsste definiert werden, ob die Bestellungen via Mail oder via Web reinkommen sollen. 
+5. Nicht-Abstreitbarkeit: Beim Webshop müsste definiert werden, ob die Bestellungen via Mail oder via Web hereinkommen sollen. 
 6. Verlässlichkeit: Da die Server alle inhouse sind, müssen da natürlich die Wartungen organisiert werden, die Backups in regelmässigen Abständen gemacht werden, Datenbanken regelmässig konsulieren und Patches regelmässig eingespielt werden.
-7. Zugriffskontrolle: Da alle Mitarbeiter intensiv mit dem Internet Arbeiten ist es wichig, dass diese nur auf bestimmte Websiten Zugriff haben. Diese Zugriffe müssen im voraus definiert werden und durch Programme sollten dann die verbotenen Websiten gesperrt werden.
+7. Zugriffskontrolle: Da alle Mitarbeiter intensiv mit dem Internet arbeiten ist es wichtig, dass diese nur auf bestimmte Websiten Zugriff haben. Diese Zugriffe müssen im Voraus definiert werden und durch Programme sollten dann die verbotenen Websiten gesperrt werden.
 
 Wenn alle 7 Punkte eingehalten werden wird das Sicherheitskonzept nach ISO 27000 eingehalten und das Unternehmen ist Online geschützt unterwegs.
 
@@ -322,41 +322,41 @@ Folgende Tools würden wir der Firma empfehlen, um ihren Internetzugang sicherzu
 Der Netzwerk-Sniffer Wireshark ist eine frei erhältliche Software, mit der sich Datenverbindungen auf Protokollebene mitlesen und auswerten lassen. So kann der Data Traffic im Netzwerk genau aufgenommen und analysiert werden. 
 
 ### PRTG
-Das PRTG überwacht ihr Netzwerk rund um die Uhr und, wenn das Netzwerk ein fehler hat, gibt die PRTG Software eine Fehlermeldung und markiert das Netzwerk mit Rot. Durch diese Software hat die Systemadministration einen guten Überblick über das System und kann Ausfälle schnell erkennen. Die PRTG hat viele zusatz Features wie ein Benachrichtigungssystem, GUI, Cluster Failover Lösung, Maps und Dashboards, verteiltes Monitoring und detaillierte Berichte.
+Das PRTG überwacht ihr Netzwerk rund um die Uhr und, wenn das Netzwerk ein Fehler hat, gibt die PRTG Software eine Fehlermeldung und markiert das Netzwerk mit Rot. Durch diese Software hat die Systemadministration einen guten Überblick über das System und kann Ausfälle schnell erkennen. Die PRTG hat viele Zusatz Features wie ein Benachrichtigungssystem, GUI, Cluster Failover Lösung, Maps und Dashboards, verteiltes Monitoring und detaillierte Berichte.
 ### LAN Guard
 Ohne Patch-Management ist Ihr Unternehmen zahlreichen Risiken ausgesetzt. Denn fehlende Updates sind die häufigste Ursache für Sicherheitslücken im Netzwerk. Mit GFI LanGuard lassen sich offene Schwachstellen schnell erkennen und rechtzeitig beheben, um Angreifern keine Chance zu geben. 
 
 <img src="Bild9.jpg" alt="Alt-Text" title="" /> <br>
 
 ### Solar Winds Netowrk Performance
-Netzwerksicherheitsprobleme treten meisst dann auf wenn man die Konfiguration ändert. Mit der Software SolarWinds NPM können diese fehler und Netzwerkkritischen kofigurationänderung Rückgängig gemacht und behoben werden. Neben soliden Schwachstellen-Scans und erweiterten Optionen zur Erstellung und Überwachung von Richtlinien ist dies bei weitem die erste Wahl für Netzwerküberwachungssysteme.
+Netzwerksicherheitsprobleme treten meist dann auf, wenn man die Konfiguration ändert. Mit der Software SolarWinds NPM können diese Fehler und Netzwerk kritischen Konfiguration Änderung rückgängig gemacht und behoben werden. Neben soliden Schwachstellen-Scans und erweiterten Optionen zur Erstellung und Überwachung von Richtlinien ist dies bei weitem die erste Wahl für Netzwerküberwachungssysteme.
 
 ### Splunk
 Dafür ist Splunk eine gute Wahl, wenn ein Log Tool benötigt wird. Es ist wichtig, eine Art von Log Mechanissmus in einer Firma zu haben. Dadurch kann man einfach an gewünschte Daten kommen.
-Splunk ermöglicht es verschiedene Dateien, Meztiken und auch Log Dateien anzuschauen und zu Filtern. Somit spart man sich viel Zeit, und bringt Struktur.
+Splunk ermöglicht es verschiedene Dateien und auch Log Dateien anzuschauen und zu filtern. Somit spart man sich viel Zeit, und bringt Struktur.
  
 ### Wartung
-Der Prozess bei der Wartung läuft über ITSM und dem ITIL Prozess. ITSM ist ein internet Ticket Tool von BCM. Bei einer Wartung muss ein Change angemeldet werden und auf folgende Kriterien geachtet werden:
+Der Prozess bei der Wartung läuft über ITSM und dem ITIL Prozess. ITSM ist ein Internet Ticket Tool von BCM. Bei einer Wartung muss ein Change angemeldet werden und auf folgende Kriterien geachtet werden:
 
 * Datum (Start- & Enddatum) -> Einhaltung der SLA
 * Configuration Item
 * Collision Detection
 * Risk Report
 
-Es muss genau angegeben werden, in welcher Zeitperiode die Wartung stattfindet. Diese soll im normalfall an einem Wochenende stattfinden, ausser es ist ein Notfall und dieser Change ist Betriebskritisch. 
+Es muss genau angegeben werden, in welcher Zeitperiode die Wartung stattfindet. Diese soll im Normalfall an einem Wochenende stattfinden, ausser es ist ein Notfall und dieser Change ist Betriebskritisch. 
 Der Configuration Item muss genau angegeben werden (Hostname und Mac Adresse).
 Collision Detection wird automatisch erkennen, ob der gleiche oder andere Hosts um der gleichen Zeit auch einen Change durchführt. 
-Beim Produkt Katalog wird beschrieben, welche Applikationen oder Dienste davon betroffen werden. Diese zuständige Gruppen / Abteilungen müssen diesen Change vor der Durchführung noch genehmigen. Eine definierte Risk Report wird im internen Ticket Tool ITSM ausgefüllt. Bei den Notes wird angefügt, was genau bei diesem Change gemacht werden muss. 
+Beim Produkt Katalog wird beschrieben, welche Applikationen oder Dienste davon betroffen werden. Diese zuständigen Gruppen / Abteilungen müssen diesen Change vor der Durchführung noch genehmigen. Eine definierte Risk Report wird im internen Ticket Tool ITSM ausgefüllt. Bei den Notes wird angefügt, was genau bei diesem Change gemacht werden muss. 
 
 ### Vergleich
  
 <img src="Bild4.png" alt="Alt-Text" title="" /> <br>
 
 ## Firewall 
-Eine Firewall ist essentiell und es ist nur eine Frage der Zeit bis ein ungebetener Gast sich im eigenen Netzwerk umschaut, es führt also kein Weg an einer Firewall vorbei. Es gibt drei Arten von Firewall lösungen: Hardware-Firewalls, PC Lösungen und Firewall Services vom eigenen Provider z.B. Diese werden hier anschliessend verglichen.
+Eine Firewall ist essenziell und es ist nur eine Frage der Zeit bis ein ungebetener Gast sich im eigenen Netzwerk umschaut, es führt also kein Weg an einer Firewall vorbei. Es gibt drei Arten von Firewall Lösungen: Hardware-Firewalls, PC Lösungen und Firewall Services vom eigenen Provider z.B. Diese werden hier anschliessend verglichen.
 
 ### Günstige Firewalls
-Die Fortigate ist einer der Markführenden Firewalls im KMU bereich. Sie unterstützt mit verschiedensten Features und Add ons gute Security defaults und man kann sehr gut schon das eigene Netzwerk überwachen. Diese NGFW hat einen Durchsatz von über 2 Gbit/s, unterstützt mehrere  VLANs, und bietet eine eigene VPN Lösung. Hier bei empfiehlt sich am besten die Fortigate 60E Edition.
+Die Fortigate ist einer der Mark führende Firewalls im KMU Bereich. Sie unterstützt mit verschiedensten Features und Add ons gute Security defaults und man kann sehr gut schon das eigene Netzwerk überwachen. Diese NGFW hat einen Durchsatz von über 2 Gbit/s, unterstützt mehrere  VLANs, und bietet eine eigene VPN Lösung. Hierbei empfiehlt sich am besten die Fortigate 60E Edition.
 
 ### Anforderungen
 * Glasfaser Kabel
@@ -369,7 +369,7 @@ Die Fortigate ist einer der Markführenden Firewalls im KMU bereich. Sie unterst
 
 ### PC-Lösung mit Linux
 OPNsense ist eine Open Source Firewall Lösung welche für FreeBSD entwickelt wurde und somit auch auf Linux läuft. Es werden Multi WAN, VPN, 2FA und viele weitere nützliche Features unterstützt. 
-Ein Grosser Vorteil von OPNSense ist das dieser Dienst kostenlos ist und er wird immer stetig verbessert. Durch Wöchentliche Securtiy updates von OPNSense ist man immer gut unterwegs mit der eigenen Netzwerk-Sicherheit 
+Ein Grosser Vorteil von OPNSense ist das dieser Dienst kostenlos ist und er wird immer stetig verbessert. Durch wöchentliche Securtiy Updates von OPNSense ist man immer gut unterwegs mit der eigenen Netzwerk-Sicherheit.
 
 ### Anforderungen
 * Glasfaser Kabel
@@ -377,14 +377,14 @@ Ein Grosser Vorteil von OPNSense ist das dieser Dienst kostenlos ist und er wird
 * Betriebssysteme 
 
 ### Firewall-Service des Providers
-Jeder Internet Provider hat bereits seine eigene Firewall. Damit kann man einen gewissen Teil der Viren bereits abfangen. Diese Art von Firewalls bieten den Vorteil, dass man sich um nichts kümmern muss bzw. Einstellungen nicht selbstständig vornehmen muss sondern alles bei Provider in Auftrag geben kann. Ein Nachteil ist aber, man kann Änderungen nicht selbst vornehmen und somit muss man immer warten bis der Provider die Änderung vorgenommen hat.
+Jeder Internet Provider hat bereits seine eigene Firewall. Damit kann man einen gewissen Teil der Viren bereits abfangen. Diese Art von Firewalls bieten den Vorteil, dass man sich um nichts kümmern muss bzw. Einstellungen nicht selbstständig vornehmen muss, sondern alles bei Provider in Auftrag geben kann. Ein Nachteil ist aber, man kann Änderungen nicht selbst vornehmen und somit muss man immer warten bis der Provider die Änderung vorgenommen hat.
 
 ### Vergleich
  
 <img src="Bild5.png" alt="Alt-Text" title="" /> <br>
 
 ## VPN 
-Ein VPN ist ein Virtuellen Privates Netzwerk welches auf einer öffentlich zugänglichen Infrastruktur basiert. Ausschliesslich wer zu diesem netzwerk gehört und autorisiert ist kann mit andern Leuten in diesem Netzwerk kommunizieren. So können zum Beispiel Mitarbeiter einer Firma von zu Hause aus in das Firmennetzwerk zugriefen und die infrastruktur der Firma nutzen ohne direkt im Netzwerk sein zu müssen.
+Ein VPN ist ein Virtuellen privates Netzwerk welches auf einer öffentlich zugänglichen Infrastruktur basiert. Ausschliesslich wer zu diesem Netzwerk gehört und autorisiert ist kann mit andern Leuten in diesem Netzwerk kommunizieren. So können zum Beispiel Mitarbeiter einer Firma von zu Hause aus in das Firmennetzwerk zugreifen und die infrastruktur der Firma nutzen ohne direkt im Netzwerk sein zu müssen.
 
 ## VPN-Achitekturen
 ### Site-to-Site VPN
@@ -392,23 +392,23 @@ Bei einem Site-to-Site werden zwei lokale Netzwerke durch VPN-Gateways verbunden
 Der entscheidende Vorteil dieser Lösung liegt in der Tatsache, dass keine der lokalen Arbeitsstationen mit einer speziellen VPN-Software ausgestattet werden muss. Die Gateways übernehmen in diesem Fall die gesamte Gewährleistung der Sicherheit, weshalb das VPN für die im lokalen Netz befindlichen Rechner vollkommen transparent ist.
  
 ###  End-to-End VPN
-Die End-to-End Architektur stellt eine direkte Verbindung zwischen zwei Hosts dar. Die End-to-End Architektur ist die sicherste Lösung für eine VPN-Verbindung, da der Tunnel mit den verschlüsselten Daten die gesamte Verbindung bis zu den Hosts abdeckt (siehe Abb. 2). Damit wäre ein Angriff auf den Verbindungsweg nur schwer durchzuführen und damit fast ausgeschlossen. Der Nachteil dieser Lösung ergibt sich aus der Tatsache, dass jeder der beteiligten Hosts eine spezielle VPN-Software benötigt und weiterhin leistungsstark genug sein sollte damit Verzögerungen der Verbindung minimiert werden können.
+Die End-to-End Architektur stellt eine direkte Verbindung zwischen zwei Hosts dar. Die End-to-End Architektur ist die sicherste Lösung für eine VPN-Verbindung, da der Tunnel mit den verschlüsselten Daten die gesamte Verbindung bis zu den Hosts abdeckt (siehe Abb. 2). Damit wäre ein Angriff auf den Verbindungsweg nur schwer durchzuführen und damit fast ausgeschlossen. Der Nachteil dieser Lösung ergibt sich aus der Tatsache, dass jeder der beteiligten Hosts eine spezielle VPN-Software benötigt und weiterhin leistungsstark genug sein sollte, damit Verzögerungen der Verbindung minimiert werden können.
  
 <img src="Bild6.jpg" alt="Alt-Text" title="" /> <br>
 
 ###  Site-to-End VPN (Remote Access)
-Diese Möglichkeit ist eine Kombination aus den beiden vorangegangen VPN-Lösungen. Remote-Access VPNs ermöglichen einen Remotezugriff auf die Ressourcen eines Unternehmens unter Wahrung der Datensicherheit, d.h. es wird eine verschlüsselte Verbindung vom Client zum Firmennetzwerk aufgebaut (siehe Abb 3). Der Client wählt sich zuerst bei seinem Provider ein und baut dann automatisch einen verschlüsselten Tunnel zum VPN-Gateway auf. Alle Clients müssen mit einer speziellen Client-VPN-Software ausgestattet werden. Eine klassische Anwendung stellt die Anbindung von Außendienstmitarbeitern dar (in diesem Falle wird der Client als Roadwarrior bezeichnet).
+Diese Möglichkeit ist eine Kombination aus den beiden vorangegangen VPN-Lösungen. Remote-Access VPNs ermöglichen einen Remotezugriff auf die Ressourcen eines Unternehmens unter Wahrung der Datensicherheit, d.h. es wird eine verschlüsselte Verbindung vom Client zum Firmennetzwerk aufgebaut. Der Client wählt sich zuerst bei seinem Provider ein und baut dann automatisch einen verschlüsselten Tunnel zum VPN-Gateway auf. Alle Clients müssen mit einer speziellen Client-VPN-Software ausgestattet werden. Eine klassische Anwendung stellt die Anbindung von Außendienstmitarbeitern dar (in diesem Falle wird der Client als Roadwarrior bezeichnet).
  
 ### Hardwarelösung
-Da viele NGFWs auch VPN unterstützen und es kaum Hardware gibt welche nur für VPNs hergestellt wird nehmen wir hier wieder den PA-3020 von Paloalto. Dieser ermöglicht 1000 VPN Nutzer was in unserem Fall mehr als ausreicht. Da nicht speziell erwähnt wird, dass viele Mitarbeiter im Homeoffice oder sonst auswärts arbeiten gehen wir davon aus, dass dies kein Schwerpunkt ist, trotzdem ermöglicht der PA-3020 eine VPN für jeden einzelnen Mitarbeiter.
+Da viele NGFWs auch VPN unterstützen und es kaum Hardware gibt welche nur für VPNs hergestellt wird nehmen wir hier wieder den PA-3020 von Paloalto. Dieser ermöglicht 1000 VPN Nutzer was in unserem Fall mehr als ausreicht. Da nicht speziell erwähnt wird, dass viele Mitarbeiter im Homeoffice oder sonst auswärts arbeiten gehen wir davon aus, dass dies kein Schwerpunkt ist, trotzdem ermöglicht der PA-3020 ein VPN für jeden einzelnen Mitarbeiter.
 
 ### VPN-Service des Providers
-NordVPN ist ein VPN Service welcher anonymität im Internet gewährleistet. Verbindungen werden immer über einen VPN Server des Providers geleitet und sind zwischen dem Server und dem eigenen Computer immer verschlüsselt.
+NordVPN ist ein VPN Service welcher Anonymität im Internet gewährleistet. Verbindungen werden immer über einen VPN Server des Providers geleitet und sind zwischen dem Server und dem eigenen Computer immer verschlüsselt.
 
 ### PC-Lösung mit Windows oder Linux
-OpenVPN bietet sich hier als eine Ideale Lösung an. Die Installation ist sehr einfach und man kann Zertifikate für die jeweiligen Benutzer erstellen. Die Hardware bei der das interne Ende Läuft muss genügend Leistung haben. Am Besten empfiehlt sich hier ein Raspberry Pie als Umgebung zu nützen.
+OpenVPN bietet sich hier als eine Ideale Lösung an. Die Installation ist sehr einfach und man kann Zertifikate für die jeweiligen Benutzer erstellen. Die Hardware, bei der das interne Ende läuft muss genügend Leistung haben. Am besten empfiehlt sich hier ein Raspberry Pie, als Umgebung zu nützen.
  
-Hier sieht man wie sich ein System prima mit einer Umgebung in Verbindung setzt. Wir haben hierführ ein Beispiel für die Amazon World Services genommen. 
+Hier sieht man wie sich ein System prima mit einer Umgebung in Verbindung setzt. Wir haben hierfür ein Beispiel für die Amazon World Services genommen. 
 
 <img src="Bild7.png" alt="Alt-Text" title="" /> <br>
  
