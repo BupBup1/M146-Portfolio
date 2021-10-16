@@ -4,7 +4,6 @@
  
 ## Internetanbindung für ein Unternehmen realisieren.
 ## 17.09.2021 - 28.09.2021
-<br>
 
 Jonah Gutknecht Thomas Züger<br>
 Technische Berufsschule Zürich <br>
@@ -34,6 +33,7 @@ Datum Präsentation: 28.09.2021 <br>
   - [Ausfallsicherheit und Backupleitung](#ausfallsicherheit-und-backupleitung)
   - [Welche Verbindung eignet sich auch für Backup-Leitungen?](#welche-verbindung-eignet-sich-auch-für-backup-leitungen)
   - [Internet Services](#internet-services)
+    - [Eigener Server (Inhouse):](#eigener-server-inhouse)
     - [Dedizierte Server (Root-Server):](#dedizierte-server-root-server)
     - [Services beim Provider (Shared Hosting):](#services-beim-provider-shared-hosting)
   - [Einfache Webpräsenz](#einfache-webpräsenz)
@@ -92,19 +92,18 @@ Eine Firewall ist nicht vorhanden und die Server stehen alle beim Provider.
 
 ## Themen
 ### Übertragungsrate, Verfügbarkeit
-Da die Server momentan noch bei dem Provider stehen, wäre es empfehlenswert den Internetzugang mit SDLS zu verwenden damit der Down- und Uploadspeed die gleiche Übertragunsrate bietet. Da die Server nicht Inhouse stehen, müssen viele Daten täglich auf die Server hochgeladen werden, da ist ein guter Uploadspeed ebenfalls so wichtig wie der Downloadspeed. Da die meisten SDLS Anbieter auf 100Mbit/s limitiert sind, wäre eine Glasfaser Verbindung zu Empfehlen. Durch die Städtischen Gegend sollte ein Glasfaser Zugang kein Problem sein und die Kosten sollten den Rahmen auch nicht sprengen. In der Schweiz bieten Provider Glasfaser mit einer Rate von bis zu 10Gbit/s an. Mit dieser Rate, können die Mitarbeiter effizient und mit wenig Verzögerung Arbeiten. Durch dieses Upgrade wäre die Firma für die nächsten Jahre sehr gut ausgerüstet und muss in nächster Zeit mit keiner weiteren Investiotion in dem Bereich des Internetzugangs rechnen.
+Da die Server momentan noch bei dem Provider stehen, wäre es empfehlenswert den Internetzugang mit SDLS zu verwenden damit der Down- und Uploadspeed die gleiche Übertragunsrate bietet. Weil die Server nicht Inhouse stehen, müssen viele Daten täglich auf die Server hochgeladen werden, da ist ein guter Uploadspeed ebenfalls so wichtig wie der Downloadspeed. Die meisten SDLS Anbieter auf 100Mbit/s limitiert sind, wäre eine Glasfaser Verbindung zu Empfehlen. Durch die Städtischen Gegend sollte ein Glasfaser Zugang kein Problem sein und die Kosten sollten den Rahmen auch nicht sprengen. In der Schweiz bieten Provider Glasfaser mit einer Rate von bis zu 10Gbit/s an. Mit dieser Rate können die Mitarbeiter effizient und mit wenig Verzögerung arbeiten. Durch dieses Upgrade wäre die Firma für die nächsten Jahre sehr gut ausgerüstet und muss in nächster Zeit mit keiner weiteren Investition in dem Bereich des Internetzugangs rechnen.
 
 ### Wie viel bei Internen Server:
-Wenn die Server inhouse verwaltet werden, fällt beim Upload Speed die Gewichtung schwächer aus. Trotzdem würden wir weiterhin bei einem Internetzugang mit Glasfaser bleiben, weil die Schweizer Städte bereits sehr gut mit Glasfaser Verbindung ausgestattet sind. Die modernen Webapplikationen und Multimediaanwendungen können nur mit einem guten Internetzugang reibungslos funktionieren, weshalb eine Investiton in den Bereich Glasfaser Verbindung eine gut Wahl ist. Auch wenn die Firma in den nächsten Jahren noch weiterhin wächst und sich die Mitarbeiterzahl vergrössert wird eine Glasfaser Leitung mit 1Gbit völlig aussreichen. Vielleicht müsste man noch auf eine 10Gbit/s Leitung gehen, falls der Webshop viel Bandbreite verbraucht.
-Wir empfehlen der Firma noch eine Firewall zu installieren, da ohne eine Firewall eine grosse Sicherheitslücke besteht. Da alle Mitarbeiter mit dem Internet Arbeitet, könnte jeder Mitarbeiter ein potentielles Sicherheitsrisiko sein.
+Wenn die Server inhouse verwaltet werden, fällt beim Uploadspeed die Gewichtung schwächer aus. Trotzdem würden wir weiterhin bei einem Internetzugang mit Glasfaser bleiben, weil die Schweizer Städte bereits sehr gut mit Glasfaser Verbindung ausgestattet sind. Die modernen Webapplikationen und Multimediaanwendungen können nur mit einem guten Internetzugang reibungslos funktionieren, weshalb eine Investition in den Bereich Glasfaser Verbindung eine gut Wahl ist. Auch wenn, die Firma in den nächsten Jahren noch weiterhin wächst und sich die Mitarbeiterzahl vergrössert wird eine Glasfaser Leitung mit 1Gbit völlig aussreichen. Vielleicht müsste man noch auf eine 10Gbit/s Leitung gehen, falls der Webshop viel Bandbreite verbraucht.
+Wir empfehlen der Firma noch eine Firewall zu installieren, da ohne eine Firewall eine grosse Sicherheitslücke besteht. Weil alle Mitarbeiter mit dem Internet arbeitet, könnte jeder Mitarbeiter ein potenzielles Sicherheitsrisiko sein.
 
-1. Fall 1, Ausfall von 10h tolerierbar: <br>
-Bei der suche nach dem richtigen Angebot, sollte die Ausfallzeit nicht grösser als 8h sein, dadurch hätte der Kunde noch 2h Zeit übrig, Falls das Problem nicht innerhalb der 8h gelöst werden kann. Bei einem Ausfall von über 10h würde das Geschäft grösse Schäden davontragen. Damit der Provider dieser Pflicht auch nachgeht ist es wichtig vorab bereits in einem Vertrag die SLA's zu definieren und zu bestätigen.
-Ebenfalls wichtig ist dabei darauf zuachten, dass der Support eine gute Verfügbarkeit hat und bei Störungen aktiv Kommuniziert wird, wie es mit der Problem Lösung voran geht. 
+**1. Fall 1, Ausfall von 10h tolerierbar:** <br>
+Bei der Suche nach dem richtigen Angebot, sollte die Ausfallzeit nicht grösser als 8h sein, dadurch hätte der Kunde noch 2h Zeit übrig, falls das Problem nicht innerhalb der 8h gelöst werden kann. Bei einem Ausfall von über 10h würde das Geschäft grösse Schäden davontragen. Damit der Provider dieser Pflicht auch nach geht ist es wichtig vorab bereits in einem Vertrag die SLA's zu definieren und zu bestätigen. Ebenfalls wichtig ist dabei darauf zuachten, dass der Support eine gute Verfügbarkeit hat und bei Störungen aktiv kommuniziert wird, wie es mit der Problemlösung vorangeht. 
 
-2. Fall 2, Ausfall von 4h nicht tolerierbar: <br>
-Wenn bereits ein Ausfall von 4h nicht mehr toleriert werden kann, müsste jedes Problem nach 3h gelöst sein, damit im Notfall noch 1h als reserve vorhanden wäre. Bei einer solchen Situation wäre es am besten zwei Internetanbindungen von unterschiedlichen Provider zu haben, damit man bei einem Ausfall auf die zweite Verbindung zurückgreifen kann. Dadurch wäre eine Verfügbarkeit von 99.9% realistisch.
-Die Kosten für eine Redundante Internetanbindung sind natürlich höher aber falls dadurch nur ein Ausfall von mehr als 4h verhinder werden kann, haben sich die erhöhten Kosten ausbezahlt. Auch wenn es dadurch eine erhöhte Verfügbarkeit gibt, müssen trotzdem zwingen SLA's mit den beiden Providern definiert werden, damit sie auch in der Pflicht sind die Probleme trotzdem innerhalb von 3h zu lösen.
+**2. Fall 2, Ausfall von 4h nicht tolerierbar:** <br>
+Wenn bereits ein Ausfall von 4h nicht mehr toleriert werden kann, müsste jedes Problem nach 3h gelöst sein, damit im Notfall noch 1h als Reserve vorhanden wäre. Bei einer solchen Situation wäre es am besten zwei Internetanbindungen von unterschiedlichen Provider zu haben, damit man bei einem Ausfall auf die zweite Verbindung zurückgreifen kann. Dadurch wäre eine Verfügbarkeit von 99.9% realistisch.
+Die Kosten für eine redundante Internetanbindung sind natürlich höher aber falls dadurch nur ein Ausfall von mehr als 4h verhinder werden kann, haben sich die erhöhten Kosten ausbezahlt. Auch wenn es dadurch eine erhöhte Verfügbarkeit gibt, müssen trotzdem zwingen SLA's mit den beiden Providern definiert werden, damit sie auch in der Pflicht sind, die Probleme trotzdem innerhalb von 3h zu lösen.
 
 Provider:
 - Swisscom
@@ -112,7 +111,7 @@ Provider:
 - UPC
 - Solnet
 - Init7<br> 
-In diesem Falle ist unserer Meinung nach die Swisscom mit dem Produkt «IP Plus Business Internet Service» am besten geeignet.
+In diesem Falle ist unserer Meinung nach der Provider Swisscom am besten.
  
 Begründung für Unser Entscheid:
 * Wählbare Verfügbarkeit Optionen und Service Levels. Stellen eine Hohe Verfügbarkeit zur Verfügung.
@@ -143,21 +142,21 @@ Vorteile:<br>
 Mit vDSL ist eine Downloadspeed von bis zu 250Mbit/s und eine Uploadspeed von bis zu 40Mbit/s möglich. vDSL ist bekannt, wegen seiner tiefen Latenzzeit. Ein grosser Vorteil sind, die geringen Kosten im Ausbau im Vergleich zu Glasfaser. 
 
 Nachteile:<br>
-vDSL ist nochmals 10% - 20% teuerer als DSL. Wenn man vDSL verwenden möchte, benötigt man noch spezielle vDSL-Router und vDSL Modems. Bei grösseren Entfernungen sinkt, die Leistung von DSL stark ab. Die Zukunft gehöhrt eher Glasfaser und in den Schweizer Städten ist der grösser Anteil bereits mit Glasfaser versehen. 
+vDSL ist nochmals 10% - 20% teuerer als DSL. Wenn man vDSL verwenden möchte, benötigt man noch spezielle vDSL-Router und vDSL Modems. Bei grösseren Entfernungen sinkt, die Leistung von DSL stark ab. Die Zukunft gehört eher Glasfaser und in den Schweizer Städten ist der grösser Anteil bereits mit Glasfaser versehen. 
 
 ### Fibre (FTTH)
 Vorteile:<br>
 Glasfaser bietet eine stabile und schnelle Internetanbindung. Es sind Geschwindigkeiten von bis zu 10Gbit's möglich, welche mit alternativen Internettechnologien nicht verglichen werden können. Bei der Glasfaser Technologie hat man den grossen Vorteil, dass es nicht entscheidend ist, ob der Nachbar grosse Datenmengen herunterlädt.
 
 Nachteile:<br>
-Glaskabel hat einen sehr grossen Nachteil, da wenn das Kabel etwas beschädigt wird zum Beispiel, wenn man es knickt dann sind die Glasfaser gebrochen und man wird nicht mehr auf die Leistung kommen, die man eigentlich gewohnt ist. Gegenüber Radiolink hat Glasfaser eine kleine Verzögerung. Das ist ein Grund warum bei den Börsen Frankfurt am Main und London auf Radiolink zurückgegriffen wird. In einigen Regionen in der Schweiz ist es noch nicht möglich eine Glasfaser Verbindung zuhaben. Falls man eine Glasfaser Verbindung haben will, muss man mit höheren Kosten rechnen als z.B. bei einem Cable Anschluss.
+Glaskabel hat einen sehr grossen Nachteil, da wenn das Kabel etwas beschädigt wird zum Beispiel, wenn man es knickt, dann sind die Glasfaser gebrochen und man wird nicht mehr auf die Leistung kommen, die man eigentlich gewohnt ist. Gegenüber Radiolink hat Glasfaser eine kleine Verzögerung. Das ist ein Grund, warum bei den Börsen Frankfurt am Main und London auf Radiolink zurückgegriffen wird. In einigen Regionen in der Schweiz ist es noch nicht möglich eine Glasfaser Verbindung zuhaben. Falls man eine Glasfaser Verbindung haben will, muss man mit höheren Kosten rechnen als z.B. bei einem Cable Anschluss.
 
 ### Cable
 Vorteile:<br>
 Cable hat eine sehr hohe Bandbreite, die Geschwindigkeit kann sogar mit DSL konkurrieren (bis zu 1000 Mbit/s). Über grosse Distanz verliert die Technologie wenig an Bandbreite. Damit ist die Geschwindigkeit nicht abhängig von der Distanz. Cable ist im Vergleich zu anderen Internettechnologien sehr günstig.
 
 Nachteile:<br>
-Alle die Cable haben hängen an einem Cluster. Das heisst, wenn der Nachbar eine 1 GB Datei herunterlädt habe ich weniger Bandbreite zur Verfügung da er etwas herunterlädt. An diesem Cluster ist nicht nur mein Nachbar, sondern auch viele andere in der Umgebung. Je nach Hausinstallation muss man Änderungen im jeweiligen Haushalt Netz vornehmen. Bei alten Gebäuden könnte dies schwierig gestalten, da die Kabel von dazumal nicht mehr den Standards entsprechen. Generell ist Cable eher eine ältere Technologie die in der Zukunft immer mehr an Bedeutung verlieren wird.
+Alle, die Cable haben hängen an einem Cluster. Das heisst, wenn der Nachbar eine 1 GB Datei herunterlädt habe ich weniger Bandbreite zur Verfügung da er etwas herunterlädt. An diesem Cluster ist nicht nur mein Nachbar, sondern auch viele andere in der Umgebung. Je nach Hausinstallation muss man Änderungen im jeweiligen Haushalt Netz vornehmen. Bei alten Gebäuden könnte dies schwierig gestalten, da die Kabel von dazumal nicht mehr den Standards entsprechen. Generell ist Cable eher eine ältere Technologie, die in der Zukunft immer mehr an Bedeutung verlieren wird.
 
 ### Radiolink
 Vorteile:<br>
@@ -168,50 +167,46 @@ Wenn, man diese Technologie in der Nähe von Flughäfen einsetzen möchte, muss 
 
 ### Satellit
 Vorteile: <br>
-Der grösste Vorteil von Satelliten ist, dass man den Standort ständig ändern kann und trotzdem immer ein Signal hat, solange man im Radius des Satelites ist. Die Meisten Schiffe und Flugzeuge haben diese Technologie eingebaut, um genau diesen Vorteil nutzten zu können. Diese Internetverbindung kann man auch zum Telefonieren verwenden, was auf z.B. auf dem Meer ein praktisch ist, da es dort ansonsten kein Signal gibt.
+Der grösste Vorteil von Satelliten ist, dass man den Standort ständig ändern kann und trotzdem immer ein Signal hat, solange man im Radius des Satelites ist. Die meisten Schiffe und Flugzeuge haben diese Technologie eingebaut, um genau diesen Vorteil nutzten zu können. Diese Internetverbindung kann man auch zum Telefonieren verwenden, was auf z.B. auf dem Meer ein praktisch ist, da es dort ansonsten kein Signal gibt.
  
 Nachteile: <br>
 Leider bietet die Satelliten Technologie eine sehr langsame Geschwindigkeit (max. 150Mbit/s), aufgrund der hohen Distanz, welche das Signal zurücklegen muss. Ebenfalls gibt es noch grösser Verzögerungen der Latenz zwischen 500ms und 700ms, was bei dem TCP Protokoll zu Problemen führen kann.
 
 ## Welche Technologie ist für unsere Situation am besten geeignet?
-Für unsere Situation eignet sich die ein Glasfaseranschluss (FTTH) am besten. Mit dieser Technologie hat man die bestmögliche Geschwindigkeit und für die Zukunft ist man gut vorbereitet. Die Mitarbeiter des Unternehmens benötigen für meiste Zeit der Arbeit das Internet, weshalb eine gute Verbindung die Arbeitseffizienz steigern kann. Ein Unternehmen mit 90 Mitarbeitern benötigt einen solchen Anschluss, da ansonsten keine angenehme Geschwindigkeit gehalten werden kann. Die Verfügbarkeit der Glasfaser Technologie ist ebenfalls ein entscheidender Faktor in der Wahl der Internetanbindung. Die Kosten für den einbau der Glasfaser Verbindung kann teurer kommen als bei anderen Technologien, dafür ist es eine einmalige Investition, welche die nächsten Jahre auch bestehend bleiben kann.
-
+Für unsere Situation eignet sich die ein Glasfaseranschluss (FTTH) am besten. Mit dieser Technologie hat man die bestmögliche Geschwindigkeit und für die Zukunft ist man gut vorbereitet. Die Mitarbeiter des Unternehmens benötigen für meiste Zeit der Arbeit das Internet, weshalb eine gute Verbindung die Arbeitseffizienz steigern kann. Ein Unternehmen mit 90 Mitarbeitern benötigt einen solchen Anschluss, da ansonsten keine angenehme Geschwindigkeit gehalten werden kann. Die Verfügbarkeit der Glasfaser Technologie ist ebenfalls ein entscheidender Faktor in der Wahl der Internetanbindung. Die Kosten für den Einbau der Glasfaser Verbindung kann teurer kommen als bei anderen Technologien, dafür ist es eine einmalige Investition, welche die nächsten Jahre auch bestehend bleiben kann.
 
 ## Ausfallsicherheit und Backupleitung
-Die Ausfallsicherheit wird von den Provider angegeben. Meistens werden unterschiedliche Methoden verwendet um die Ausfallzeit zu Berechnen. Heutzutage wird oft die Methode des MTBF (Mean Time Between Failures) verwendet. Die meisten Provider werden ca. die gleichen Werte bei der Verfügbarkeit anbieten. Dabei muss man bei Vertragsabschlusses die SLA's beachten, in denen die Verfügbarkeit definiert ist.
-Die Glasfaser Technologie hat noch den Vorteil, das anstelle von elektrischen Signalen Licht verwendet um die Daten zu transferieren, weshalb Magnetfelder oder Starkstromleitungen zu keinen Problemen führen. Jedoch hat Glasfasern das Problem, dass es sehr empfindlich auf Verbiegungen ist, was bei Kupfer Kabel wesentlich besser ist.
+Die Ausfallsicherheit wird von dem Provider angegeben. Meistens werden unterschiedliche Methoden verwendet, um die Ausfallzeit zu Berechnen. Heutzutage wird oft die Methode des MTBF (Mean Time Between Failures) verwendet. Die meisten Provider werden ca. die gleichen Werte bei der Verfügbarkeit anbieten. Dabei muss man bei Vertragsabschlusses die SLA's beachten, in denen die Verfügbarkeit definiert ist.
+Die Glasfaser Technologie hat noch den Vorteil, dass anstelle von elektrischen Signalen Licht verwendet, um die Daten zu transferieren, weshalb Magnetfelder oder Starkstromleitungen zu keinen Problemen führen. Jedoch hat Glasfasern das Problem, dass es sehr empfindlich auf Verbiegungen ist, was bei Kupfer Kabel wesentlich besser ist.
 
 ## Welche Verbindung eignet sich auch für Backup-Leitungen?
-Die höchste Ausfallsicherheit haben DSL, Kabel und Satellitenfunk. Wenn bei zwei Technologien kombiniert hat man natürlich nochmals eine weitere Sicherheit. Trotzdem wird es nicht möglich sien eine Verfügbarkeit von 100% zu gewährleisten. Bei der Verfügbarkeit muss man immer bedenkten, je höher die Verfügbarkeit umso Teurer der Preis. 
-Viele Untenehmen nutzen heutzutage noch eine Backup Leitung über ein 4G Netz, welches bei einem Ausfall des Kabels automatisch auf das 4G Netzwerk wechselt. 
+Die höchste Ausfallsicherheit haben DSL, Kabel und Satellitenfunk. Wenn bei zwei Technologien kombiniert hat man natürlich nochmals eine weitere Sicherheit. Trotzdem wird es nicht möglich sein eine Verfügbarkeit von 100% zu gewährleisten. Bei der Verfügbarkeit muss man immer bedenken, je höher die Verfügbarkeit, umso Teurer der Preis. 
+Viele Unternehmen nutzen heutzutage noch eine Backup-Leitung über ein 4G Netz, welches bei einem Ausfall des Kabels automatisch auf das 4G Netzwerk wechselt. 
 <img src="Bild1.png" alt="Alt-Text" title="" />
-
-  <br>
-  
   
 ## Internet Services
-3.1 Eigener Server (Inhouse):
+### Eigener Server (Inhouse):
 Vorteile: 
-Über alle Daten hat man 100% Zugriffsmöglichkeiten. Falls man weiteren Speicherplatz benötigt, muss man nur die Kosten der Festplatte tragen. Generell muss die ganze Server Hardware einmalig bezahlt werden und nicht in Monatlichen oder Jährlichen Kosten.
+Über alle Daten hat man 100 % Zugriffsmöglichkeiten. Falls man weiteren Speicherplatz benötigt, muss man nur die Kosten der Festplatte tragen. Generell muss die ganze Server Hardware einmalig bezahlt werden und nicht in Monatlichen oder jährlichen Kosten.
 
 
 Nachteile: <br>
-Die Wartung des System muss man eigenständig durchführen, wofür ausgebildetes Personal benötigt wird. Ebenfalls ist das Person auch für die Sicherheit der Systeme Verantwortlich. Dazu gehört eine Zuverlässige Stromversorgung, ein Backupkonzept, Internetverbindung und vieles mehr.
+Die Wartung des System, muss man eigenständig durchführen, wofür ausgebildetes Personal benötigt wird. Ebenfalls ist das Person auch für die Sicherheit der Systeme Verantwortlich. Dazu gehört eine zuverlässige Stromversorgung, ein Backup Konzept, Internetverbindung und vieles mehr.
  
 Text:
-Zu Beginn fallen grosse Investitionkosten an, da die ganze Hardware und Lizenzen gekauft werden müssen. Ebenfalls muss geeignetes Personal für die Installation und zukünftige Wartung eingestellt werden. Falls neue Systeme implementiert werden sollen, kann das von dem Personal selbständig gemacht werden ohne dringende Hilfe von anderen Firmen. Dafür müssen aber auch alle Wartungen und Sicherheitsstandards einhalten. Bis ein Inhouse System Aufgebaut und installiert wurde, dauert es meist länger als bei einem Server System beim Provider. Da nicht durchgehend die Daten zum Provider hoch- und heruntergeladen werden müssen, wird die Internetleitung weniger belastet.
+Zu Beginn fallen grosse Investitionskosten an, da die ganze Hardware und Lizenzen gekauft werden müssen. Ebenfalls muss geeignetes Personal für die Installation und zukünftige Wartung eingestellt werden. Falls neue Systeme implementiert werden sollen, kann das von dem Personal selbständig gemacht werden ohne dringende Hilfe von anderen Firmen. Dafür müssen aber auch alle Wartungen und Sicherheitsstandards einhalten. Bis ein Inhouse System aufgebaut und installiert wurde, dauert es meist länger als bei einem Server System beim Provider. Da nicht durchgehend die Daten zum Provider hoch- und heruntergeladen werden müssen, wird die Internetleitung weniger belastet.
 Für kleinere Unternehmen ist diese Variante weniger geeignet, aufgrund der hohen Investitionskosten zu Beginn. Bei grösseren Unternehmen kann es Sinn machen die Systeme vor Ort aufzubauen, da man über die Daten immer 100% Zugriffskontrolle hat.
  
 ### Dedizierte Server (Root-Server):
 Vorteile:<br>
-Der Provider ist in der Verantworlichkeit der Verfügbarkeit. Ebenfalls muss er die Systeme zur Verfügung stellen und je nach SLA's eine gewisse Verfügbarkeit bieten. Die Leistung und der Speicherplatz kann meisten X Beliebig erweitert werden ohne grosse Zeitliche Verzögerungen.
+Der Provider ist in der Verantwortlichkeit der Verfügbarkeit. Ebenfalls muss er die Systeme zur Verfügung stellen und je nach SLA's eine gewisse Verfügbarkeit bieten. Die Leistung und der Speicherplatz kann meisten X beliebig erweitert werden ohne grosse zeitliche Verzögerungen.
 
 Nachteile:<br>
-Bei der Verfügbarkeit ist man 100% auf den Provider angewiesen. Die Kosten fallen generell monatlich an und sind über Jahre gesehen teuerer als eine Inhouse System Kosten würde. Ein Server wird für einen Zweck vorhergesehen.
+Bei der Verfügbarkeit ist man 100 % auf den Provider angewiesen. Die Kosten fallen generell monatlich an und sind über Jahre gesehen teurer als eine Inhouse System Kosten würde. Ein Server wird für einen Zweck vorhergesehen.
  
 Text:
 Bei einem Dedicated Server handelt es sich um einen Server, der nur für einen bestimmten Zweck vorgesehen ist. Somit kann die komplette Leistung des Servers nur für eine Aufgabe verwendet werden.
-Die Server werden generell gemietet und die Kosten dafür fallen monatlich an. Bei einem Dedicated Server werden die Ressourcen des Servers nur von einem Kunden verwendet und nicht mit anderen geteilt. Dadurch unterscheidet sich ein Dedizierter Server vone einem Shared Hosting. Deshalb sind die kosten auch um einiges Höher, was dafür aber die Performance um einges erhöht.
+Die Server werden generell gemietet und die Kosten dafür fallen monatlich an. Bei einem Dedicated Server werden die Ressourcen des Servers nur von einem Kunden verwendet und nicht mit anderen geteilt. Dadurch unterscheidet sich ein dedizierter Server von einem Shared Hosting. Deshalb sind die Kosten auch um einiges Höher, was dafür aber die Performance um einiges erhöht.
 
 ### Services beim Provider (Shared Hosting):
 Vorteile:<br>
