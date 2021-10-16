@@ -19,7 +19,7 @@ Datum Präsentation: 28.09.2021 <br>
   - [Internetanbindung für ein Unternehmen realisieren.](#internetanbindung-für-ein-unternehmen-realisieren)
   - [17.09.2021 - 28.09.2021](#17092021---28092021)
 - [2. Inhaltsverzeichnis <omit in toc>](#2-inhaltsverzeichnis-omit-in-toc)
-  - [Auftrag](#auftrag)
+  - [Auftrag test](#auftrag-test)
   - [Ausgangslage](#ausgangslage)
   - [Themen](#themen)
     - [Übertragungsrate, Verfügbarkeit](#übertragungsrate-verfügbarkeit)
@@ -76,7 +76,7 @@ Datum Präsentation: 28.09.2021 <br>
 
 <br>
  
-## Auftrag
+## Auftrag test
 Sie untersuchen in Gruppen die unten aufgeführten Themen im Zusammenhang mit der Internetanbindung eines Unternehmens. Dazu sollen Sie zu jedem Thema:
 -  Zu jedem Thema die Leitfragen bearbeiten. Neue Fachwörter erklären und Zusammenhänge möglichst in einer grafischen Darstellung visualisieren.
 -  verschiedene Realisierungsmöglichkeiten (-Varianten) zeigen und erläutern.
